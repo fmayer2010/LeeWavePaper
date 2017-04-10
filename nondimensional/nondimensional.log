@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  30 MAR 2017 15:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  10 APR 2017 00:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -118,38 +118,48 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
 LaTeX Info: Redefining \[ on input line 2739.
 LaTeX Info: Redefining \] on input line 2740.
 )
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks20
+)
+\Gin@req@height=\dimen112
+\Gin@req@width=\dimen113
+)
 \@input{newcommands.aux}
 \openout2 = `newcommands.aux'.
 
 (./newcommands.tex) (./nondimensional.aux)
 \openout1 = `nondimensional.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
 
 (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count101
-\scratchdimen=\dimen112
+\scratchdimen=\dimen114
 \scratchbox=\box28
 \nofMPsegments=\count102
 \nofMParguments=\count103
-\everyMPshowfont=\toks20
+\everyMPshowfont=\toks21
 \MPscratchCnt=\count104
-\MPscratchDim=\dimen113
+\MPscratchDim=\dimen115
 \MPnumerator=\count105
 \makeMPintoPDFobject=\count106
-\everyMPtoPDFconversion=\toks21
+\everyMPtoPDFconversion=\toks22
 ) (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2016/05/10 v0.21 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -178,10 +188,6 @@ Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
 (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks22
-)
 (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 
@@ -201,12 +207,12 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Try loading font information for U+msa on input line 13.
+LaTeX Font Info:    Try loading font information for U+msa on input line 14.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 13.
+LaTeX Font Info:    Try loading font information for U+msb on input line 14.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -216,37 +222,159 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 {/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
  [4]
-Overfull \hbox (25.70964pt too wide) in paragraph at lines 199--202
+Overfull \hbox (25.70964pt too wide) in paragraph at lines 200--203
 \OT1/cmr/m/n/12 When $\OML/cmm/m/it/12 ^^O > \OT1/cmr/m/n/12 1$, the non-hy-dro
 -static so-lu-tion is of the form $\OML/cmm/m/it/12 w\OT1/cmr/m/n/12 (\OML/cmm/
 m/it/12 x; z\OT1/cmr/m/n/12 ) = [](\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ) [](\OMS/
 cmsy/m/n/12 ^^@\OML/cmm/m/it/12 mz\OT1/cmr/m/n/12 )$,
  []
 
-[5] [6] (./nondimensional.aux) ) 
+[5] [6] [7]
+Overfull \hbox (0.22234pt too wide) in paragraph at lines 285--286
+\OT1/cmr/m/n/12 re-sults in heavy wa-ter pool-ing in val-leys and re-duced wave
+ am-pli-tude (Kimura
+ []
+
+Package epstopdf Info: Source file: <delta_solutions.eps>
+(epstopdf)                    date: 2017-04-09 23:44:12
+(epstopdf)                    size: 144232 bytes
+(epstopdf)             Output file: <delta_solutions-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-04-09 23:44:55
+(epstopdf)                    size: 42338 bytes
+(epstopdf)             Command: <repstopdf --outfile=delta_solutions-eps-conver
+ted-to.pdf delta_solutions.eps>
+(epstopdf)             \includegraphics on input line 289.
+Package epstopdf Info: Output file is already uptodate.
+<delta_solutions-eps-converted-to.pdf, id=35, 472.76625pt x 383.4325pt>
+File: delta_solutions-eps-converted-to.pdf Graphic file (type pdf)
+
+<use delta_solutions-eps-converted-to.pdf>
+Package pdftex.def Info: delta_solutions-eps-converted-to.pdf used on input lin
+e 289.
+(pdftex.def)             Requested size: 390.0pt x 316.31232pt.
+Package epstopdf Info: Source file: <eta_solutions.eps>
+(epstopdf)                    date: 2017-04-09 23:44:12
+(epstopdf)                    size: 144939 bytes
+(epstopdf)             Output file: <eta_solutions-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-04-09 23:44:55
+(epstopdf)                    size: 42377 bytes
+(epstopdf)             Command: <repstopdf --outfile=eta_solutions-eps-converte
+d-to.pdf eta_solutions.eps>
+(epstopdf)             \includegraphics on input line 295.
+Package epstopdf Info: Output file is already uptodate.
+
+<eta_solutions-eps-converted-to.pdf, id=36, 472.76625pt x 383.4325pt>
+File: eta_solutions-eps-converted-to.pdf Graphic file (type pdf)
+
+<use eta_solutions-eps-converted-to.pdf>
+Package pdftex.def Info: eta_solutions-eps-converted-to.pdf used on input line 
+295.
+(pdftex.def)             Requested size: 390.0pt x 316.31232pt.
+Package epstopdf Info: Source file: <u_solutions.eps>
+(epstopdf)                    date: 2017-04-09 23:44:13
+(epstopdf)                    size: 88767 bytes
+(epstopdf)             Output file: <u_solutions-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-04-09 23:44:56
+(epstopdf)                    size: 254702 bytes
+(epstopdf)             Command: <repstopdf --outfile=u_solutions-eps-converted-
+to.pdf u_solutions.eps>
+(epstopdf)             \includegraphics on input line 301.
+Package epstopdf Info: Output file is already uptodate.
+
+<u_solutions-eps-converted-to.pdf, id=37, 563.10374pt x 422.57875pt>
+File: u_solutions-eps-converted-to.pdf Graphic file (type pdf)
+
+<use u_solutions-eps-converted-to.pdf>
+Package pdftex.def Info: u_solutions-eps-converted-to.pdf used on input line 30
+1.
+(pdftex.def)             Requested size: 390.0pt x 292.67581pt.
+Package epstopdf Info: Source file: <w_solutions.eps>
+(epstopdf)                    date: 2017-04-09 23:44:14
+(epstopdf)                    size: 92198 bytes
+(epstopdf)             Output file: <w_solutions-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-04-09 23:44:56
+(epstopdf)                    size: 244187 bytes
+(epstopdf)             Command: <repstopdf --outfile=w_solutions-eps-converted-
+to.pdf w_solutions.eps>
+(epstopdf)             \includegraphics on input line 307.
+Package epstopdf Info: Output file is already uptodate.
+
+<w_solutions-eps-converted-to.pdf, id=38, 563.10374pt x 422.57875pt>
+File: w_solutions-eps-converted-to.pdf Graphic file (type pdf)
+
+<use w_solutions-eps-converted-to.pdf>
+Package pdftex.def Info: w_solutions-eps-converted-to.pdf used on input line 30
+7.
+(pdftex.def)             Requested size: 390.0pt x 292.67581pt.
+Package epstopdf Info: Source file: <vel_via_diff.eps>
+(epstopdf)                    date: 2017-04-09 23:44:16
+(epstopdf)                    size: 2169256 bytes
+(epstopdf)             Output file: <vel_via_diff-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-04-09 23:44:57
+(epstopdf)                    size: 248359 bytes
+(epstopdf)             Command: <repstopdf --outfile=vel_via_diff-eps-converted
+-to.pdf vel_via_diff.eps>
+(epstopdf)             \includegraphics on input line 313.
+Package epstopdf Info: Output file is already uptodate.
+
+<vel_via_diff-eps-converted-to.pdf, id=39, 466.74374pt x 388.45125pt>
+File: vel_via_diff-eps-converted-to.pdf Graphic file (type pdf)
+
+<use vel_via_diff-eps-converted-to.pdf>
+Package pdftex.def Info: vel_via_diff-eps-converted-to.pdf used on input line 3
+13.
+(pdftex.def)             Requested size: 390.0pt x 324.59569pt.
+Package epstopdf Info: Source file: <max_slopes.eps>
+(epstopdf)                    date: 2017-04-10 00:01:54
+(epstopdf)                    size: 64603 bytes
+(epstopdf)             Output file: <max_slopes-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-04-09 23:44:57
+(epstopdf)                    size: 27917 bytes
+(epstopdf)             Command: <repstopdf --outfile=max_slopes-eps-converted-t
+o.pdf max_slopes.eps>
+(epstopdf)             \includegraphics on input line 319.
+runsystem(repstopdf --outfile=max_slopes-eps-converted-to.pdf max_slopes.eps)..
+.executed safely (allowed).
+
+Package epstopdf Info: Result file: <max_slopes-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-04-10 00:02:48
+(epstopdf)                    size: 27950 bytes.
+
+<max_slopes-eps-converted-to.pdf, id=40, 469.755pt x 384.43625pt>
+File: max_slopes-eps-converted-to.pdf Graphic file (type pdf)
+
+<use max_slopes-eps-converted-to.pdf>
+Package pdftex.def Info: max_slopes-eps-converted-to.pdf used on input line 319
+.
+(pdftex.def)             Requested size: 390.0pt x 319.16412pt.
+ [8] [9 <./delta_solutions-eps-converted-to.pdf>] [10 <./eta_solutions-eps-conv
+erted-to.pdf>] [11 <./u_solutions-eps-converted-to.pdf>] [12 <./w_solutions-eps
+-converted-to.pdf>] [13 <./vel_via_diff-eps-converted-to.pdf>] [14 <./max_slope
+s-eps-converted-to.pdf>]
+(./nondimensional.aux) ) 
 Here is how much of TeX's memory you used:
- 2456 strings out of 493014
- 32552 string characters out of 6133351
- 100779 words of memory out of 5000000
- 5972 multiletter control sequences out of 15000+600000
+ 2562 strings out of 493014
+ 34705 string characters out of 6133351
+ 102852 words of memory out of 5000000
+ 6068 multiletter control sequences out of 15000+600000
  13024 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,8n,24p,240b,192s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2016/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr17.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmsy6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmsy8.pfb>
-Output written on nondimensional.pdf (6 pages, 114118 bytes).
+ 38i,8n,24p,805b,225s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2016/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmex10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmmi12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmmi8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr17.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/c
+msy6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cms
+y8.pfb>
+Output written on nondimensional.pdf (14 pages, 973949 bytes).
 PDF statistics:
- 63 PDF objects out of 1000 (max. 8388607)
- 44 compressed objects within 1 object stream
+ 129 PDF objects out of 1000 (max. 8388607)
+ 83 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,6 +1,7 @@
 \documentclass[12pt]{article}
 
 \usepackage{natbib,amsfonts,graphics,amsmath}
+\usepackage{graphicx}
 
 \include{newcommands}
 
@@ -206,8 +207,123 @@ w(x,z) &=& \cos(x) \exp(-m z)\,,\\
 p(x,z) &=& -m \sin(x) \exp(-m z)\,.
 \end{eqnarray*}
 Since $p$ and $w$ are $\pi/2$ out of phase, the form drag is identically zero.
- 
+
+\subsection{Perturbation expansion}
+
+Representing the vertical displacement of a streamline intersecting the point $(x,z)$ from its upstream position as 
+\[
+\delta(x,z) = z-z_o,
+\]
+we can recast equations 1-3 into Long's Model (Long 1953)
+\[
+\nabla^2\delta + \frac{N^2}{U^2}\delta = 0.
+\]
+Upon taking the hydrostatic approximation, this simplifies further to
+\[
+\partial_z^2\delta + l^2\delta = 0,
+\]
+where the subscript z represents differentiation with respect to z and $l=\frac{N}{U}$.
+Assuming sinusoidal topography of the form $h(x) = h_0 cos(kx)$, the kinematic boundary condition now reads
+\[
+\delta(x,h(x)) = h(x) = h_0 cos(kx).
+\]
+We are now in a position to consider a perturbation solution for $\delta$, as in Smith 1977. We can postulate a perturbation expansion of $\delta$ in powers of J as
+\[
+\delta(x,z) = \delta_0+ J\delta _1 +  J^2 \delta_2+ O(J^3).
+\]
+And we can write the bottom boundary condition as a Taylor expansion around $x=0$ (I have foreseen the scaling $h(x)\propto h_0$ and $\partial_z \propto N/U$)
+\[
+\delta(x,h(x)) = \delta(x,0) + h \partial_z \delta |_0 +  h^2 \partial_z^2 \delta |_0 + O(J^3) = h(x).
+\]
+The 0th order solution comes rapidly upon plugging the perturbation expansion into the boundary condition
+\begin{eqnarray*}
+	\delta &=& \delta_0 + O(J) \\
+	\delta(x,0) + O(J) &=& h(x)\\
+	\implies \delta_0|_0 &=& h_0cos(kx)
+\end{eqnarray*}
+And, unsurprisingly, upon appeal to Long's Model, the 0th order solution for $\delta$ emerges as
+\[
+\delta = h_0cos(kx+lz)  + O(J).
+\]
+By similar steps, Smith arrived at the 1st order solution
+\begin{eqnarray*}
+	\delta &=& \delta_0 + J\delta_1 + O(J^2) \\
+	\delta(x,0) + h \partial_z \delta |_0 +  O(J^2) &=& h(x)\\
+	\delta_0|_0 +  h \partial_z \delta_0 |_0 + J\delta_1|_0 +O(J^2)&=& h(x)\\
+	and \   \delta_0|_0 &=& h(x) \\
+	\implies h \partial_z \delta_0 |_0 &=& -J\delta_1|_0\\
+	h_0 cos(kx) \partial_z(h_(cos(kx+lz))|_0&=& -J\delta_1|_0\\
+	 -J h_0 cos(kx)sin(kx) &=& -J\delta_1|_0\\
+	  -J h_0 \frac{1}{2}sin(2kx) &=& -J\delta_1|_0\\
+	\implies \delta_1|_0 &=& \frac{h_0}{2}sin(2kx)
+\end{eqnarray*}
+And, on appeal to Long's Model, we have 
+\[
+\delta(x,z) = h_0cos(kx+lz) + \frac{J h_0}{2}sin(2kx) + O(J^2)
+\]
+With a little more paper and time, it can be shown by identical steps that the 2nd order solution is  
+\[
+\delta(x,z) = h_0cos(kx+lz) + \frac{J h_0}{2}sin(2kx+lz) + \frac{J ^2h_0}{2}cos(kx+lz) + O(J^3)
+\]
+However, all of these solutions are evaluated at the displaced streamline height $z$, rather than the undisturbed height of the streamline far upstream, $z_0$. The two are related via
+\[
+\delta(x,z) = \delta(x,z_0+\eta(x,z_0)) = \eta(x,z_0)
+\]
+We can now use $\eta(x,z_0)$ to write $\delta(x,z)$ as a Taylor expansion around $z_0$, and after some effort, arrive at the 2nd order solution for $\eta(x,z_0)$:
+\begin{eqnarray*}
+\eta(x,z_0) &=& h_0cos(kx+lz_0)\\
+ &+&\frac{1}{2}Jh_0(sin(2kx+lz_0)_ - sin(2kx + 2lz_0))\\
+ &+&\frac{1}{2}J^2h_0[cos(kx+lz_0)+cos(kx+lz_0)cos(2kx+lz_0)\\
+ &-&sin(kx+lz_0)sin(2kx+lz_0)+sin(kx+lz_0)sin(2kx+2lz_0)\\
+ &-&2cos^2(kx+lz_0)]\\
+ &+& O(J^3h_0)
+\end{eqnarray*}
+Note that this is an extension of Smith 1977, in which the solution is given only to $O(Jh_0)$. 
+
+Plots of these solutions for J=0.3 are given below, as well as those of the velocity fields $u$ and $w$ that these displacements entail. Note the steepening of the streamlines increases with the order of the solution. 
+
+Vertical streamlines imply wave breaking (Long 1953, Miles 1969) which results in heavy water pooling in valleys and reduced wave amplitude (Kimura and Manins 1980). The condition of vertical streamlines can be expressed mathematically as $\partial_z \delta = 1$. Thus I also include a plot of the maximum value of $\partial_z \delta$ as a function of J for each order solution. As Smith reported in 1977, the 1st order accurate solution for $\delta$ predicts that wave breaking will commence at $J=0.75$. With our next order solution, this threshold drops to $J=0.65$. Of course, neither solutions are suitable for analysis of such nonlinear flow; in order to limit the error in a $J=0.65$ solution to less than $5\%$, we would need a 6th order accurate expansion ($0.65^7 = 0.049$).
+
+\begin{figure}
+	\centering
+	\includegraphics[width=1\textwidth]{delta_solutions.eps}
+	\caption{0th, 1st, and 2nd order solutions for $\delta(x,z)$ with $J=0.3$.}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=1\textwidth]{eta_solutions.eps}
+	\caption{0th, 1st, and 2nd order solutions for $\eta(x,z_0)$ with $J=0.3$.}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=1\textwidth]{u_solutions.eps}
+	\caption{0th, 1st, and 2nd order solutions for $u(x,z_0)$ with $J=0.3$.}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=1\textwidth]{w_solutions.eps}
+	\caption{0th, 1st, and 2nd order solutions for $w(x,z_0)$ with $J=0.3$.}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=1\textwidth]{vel_via_diff.eps}
+	\caption{2nd order solutions for velocity calculated by numerical differentiation of $eta_2$.}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=1\textwidth]{max_slopes.eps}
+	\caption{Maximum slope in $\delta$ as a function of J.}
+\end{figure}
+
 \end{document}
+
+
+
 
 w = cos(x)exp(-m z)
 wx = -sin(x)exp(-m z)
