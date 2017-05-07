@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  10 APR 2017 00:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  24 APR 2017 12:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -221,160 +221,215 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 {/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
- [4]
-Overfull \hbox (25.70964pt too wide) in paragraph at lines 200--203
+ [4] [5]
+[6]
+Overfull \hbox (7.79044pt too wide) in paragraph at lines 188--190
+\OT1/cmr/m/n/12 Nondimensionalizing as above, with the ad-di-tion of $\OML/cmm/
+m/it/12 v \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 u[]v\OMS/cmsy/m/n/12 ^^C$\OT1/cmr/
+m/n/12 , the $\OML/cmm/m/it/12 u$\OT1/cmr/m/n/12 -momentum
+ []
+
+[7] [8]
+Overfull \hbox (25.70964pt too wide) in paragraph at lines 268--271
 \OT1/cmr/m/n/12 When $\OML/cmm/m/it/12 ^^O > \OT1/cmr/m/n/12 1$, the non-hy-dro
 -static so-lu-tion is of the form $\OML/cmm/m/it/12 w\OT1/cmr/m/n/12 (\OML/cmm/
 m/it/12 x; z\OT1/cmr/m/n/12 ) = [](\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ) [](\OMS/
 cmsy/m/n/12 ^^@\OML/cmm/m/it/12 mz\OT1/cmr/m/n/12 )$,
  []
 
-[5] [6] [7]
-Overfull \hbox (0.22234pt too wide) in paragraph at lines 285--286
-\OT1/cmr/m/n/12 re-sults in heavy wa-ter pool-ing in val-leys and re-duced wave
- am-pli-tude (Kimura
- []
-
+[9] [10] [11]
 Package epstopdf Info: Source file: <delta_solutions.eps>
-(epstopdf)                    date: 2017-04-09 23:44:12
-(epstopdf)                    size: 144232 bytes
+(epstopdf)                    date: 2017-04-16 22:55:17
+(epstopdf)                    size: 123223 bytes
 (epstopdf)             Output file: <delta_solutions-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-04-09 23:44:55
-(epstopdf)                    size: 42338 bytes
+(epstopdf)                    date: 2017-04-16 22:57:24
+(epstopdf)                    size: 36373 bytes
 (epstopdf)             Command: <repstopdf --outfile=delta_solutions-eps-conver
 ted-to.pdf delta_solutions.eps>
-(epstopdf)             \includegraphics on input line 289.
+(epstopdf)             \includegraphics on input line 369.
 Package epstopdf Info: Output file is already uptodate.
-<delta_solutions-eps-converted-to.pdf, id=35, 472.76625pt x 383.4325pt>
+
+<delta_solutions-eps-converted-to.pdf, id=47, 472.76625pt x 383.4325pt>
 File: delta_solutions-eps-converted-to.pdf Graphic file (type pdf)
 
 <use delta_solutions-eps-converted-to.pdf>
 Package pdftex.def Info: delta_solutions-eps-converted-to.pdf used on input lin
-e 289.
+e 369.
 (pdftex.def)             Requested size: 390.0pt x 316.31232pt.
 Package epstopdf Info: Source file: <eta_solutions.eps>
-(epstopdf)                    date: 2017-04-09 23:44:12
-(epstopdf)                    size: 144939 bytes
+(epstopdf)                    date: 2017-04-16 22:55:17
+(epstopdf)                    size: 123079 bytes
 (epstopdf)             Output file: <eta_solutions-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-04-09 23:44:55
-(epstopdf)                    size: 42377 bytes
+(epstopdf)                    date: 2017-04-16 22:57:25
+(epstopdf)                    size: 36108 bytes
 (epstopdf)             Command: <repstopdf --outfile=eta_solutions-eps-converte
 d-to.pdf eta_solutions.eps>
-(epstopdf)             \includegraphics on input line 295.
+(epstopdf)             \includegraphics on input line 375.
 Package epstopdf Info: Output file is already uptodate.
 
-<eta_solutions-eps-converted-to.pdf, id=36, 472.76625pt x 383.4325pt>
+<eta_solutions-eps-converted-to.pdf, id=48, 472.76625pt x 383.4325pt>
 File: eta_solutions-eps-converted-to.pdf Graphic file (type pdf)
 
 <use eta_solutions-eps-converted-to.pdf>
 Package pdftex.def Info: eta_solutions-eps-converted-to.pdf used on input line 
-295.
+375.
 (pdftex.def)             Requested size: 390.0pt x 316.31232pt.
 Package epstopdf Info: Source file: <u_solutions.eps>
-(epstopdf)                    date: 2017-04-09 23:44:13
-(epstopdf)                    size: 88767 bytes
+(epstopdf)                    date: 2017-04-16 22:53:35
+(epstopdf)                    size: 89398 bytes
 (epstopdf)             Output file: <u_solutions-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-04-09 23:44:56
-(epstopdf)                    size: 254702 bytes
+(epstopdf)                    date: 2017-04-16 22:57:25
+(epstopdf)                    size: 254503 bytes
 (epstopdf)             Command: <repstopdf --outfile=u_solutions-eps-converted-
 to.pdf u_solutions.eps>
-(epstopdf)             \includegraphics on input line 301.
+(epstopdf)             \includegraphics on input line 381.
 Package epstopdf Info: Output file is already uptodate.
 
-<u_solutions-eps-converted-to.pdf, id=37, 563.10374pt x 422.57875pt>
+<u_solutions-eps-converted-to.pdf, id=49, 563.10374pt x 422.57875pt>
 File: u_solutions-eps-converted-to.pdf Graphic file (type pdf)
 
 <use u_solutions-eps-converted-to.pdf>
-Package pdftex.def Info: u_solutions-eps-converted-to.pdf used on input line 30
+Package pdftex.def Info: u_solutions-eps-converted-to.pdf used on input line 38
 1.
 (pdftex.def)             Requested size: 390.0pt x 292.67581pt.
 Package epstopdf Info: Source file: <w_solutions.eps>
-(epstopdf)                    date: 2017-04-09 23:44:14
-(epstopdf)                    size: 92198 bytes
+(epstopdf)                    date: 2017-04-16 22:53:36
+(epstopdf)                    size: 92666 bytes
 (epstopdf)             Output file: <w_solutions-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-04-09 23:44:56
-(epstopdf)                    size: 244187 bytes
+(epstopdf)                    date: 2017-04-16 22:57:26
+(epstopdf)                    size: 244556 bytes
 (epstopdf)             Command: <repstopdf --outfile=w_solutions-eps-converted-
 to.pdf w_solutions.eps>
-(epstopdf)             \includegraphics on input line 307.
+(epstopdf)             \includegraphics on input line 387.
 Package epstopdf Info: Output file is already uptodate.
 
-<w_solutions-eps-converted-to.pdf, id=38, 563.10374pt x 422.57875pt>
+<w_solutions-eps-converted-to.pdf, id=50, 563.10374pt x 422.57875pt>
 File: w_solutions-eps-converted-to.pdf Graphic file (type pdf)
 
 <use w_solutions-eps-converted-to.pdf>
-Package pdftex.def Info: w_solutions-eps-converted-to.pdf used on input line 30
+Package pdftex.def Info: w_solutions-eps-converted-to.pdf used on input line 38
 7.
 (pdftex.def)             Requested size: 390.0pt x 292.67581pt.
 Package epstopdf Info: Source file: <vel_via_diff.eps>
-(epstopdf)                    date: 2017-04-09 23:44:16
-(epstopdf)                    size: 2169256 bytes
+(epstopdf)                    date: 2017-04-16 22:53:38
+(epstopdf)                    size: 2151129 bytes
 (epstopdf)             Output file: <vel_via_diff-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-04-09 23:44:57
-(epstopdf)                    size: 248359 bytes
+(epstopdf)                    date: 2017-04-16 22:57:26
+(epstopdf)                    size: 245815 bytes
 (epstopdf)             Command: <repstopdf --outfile=vel_via_diff-eps-converted
 -to.pdf vel_via_diff.eps>
-(epstopdf)             \includegraphics on input line 313.
+(epstopdf)             \includegraphics on input line 393.
 Package epstopdf Info: Output file is already uptodate.
 
-<vel_via_diff-eps-converted-to.pdf, id=39, 466.74374pt x 388.45125pt>
+<vel_via_diff-eps-converted-to.pdf, id=51, 466.74374pt x 388.45125pt>
 File: vel_via_diff-eps-converted-to.pdf Graphic file (type pdf)
 
 <use vel_via_diff-eps-converted-to.pdf>
 Package pdftex.def Info: vel_via_diff-eps-converted-to.pdf used on input line 3
-13.
+93.
 (pdftex.def)             Requested size: 390.0pt x 324.59569pt.
+ [12] [13 <./delta_solutions-eps-converted-to.pdf>] [14 <./eta_solutions-eps-co
+nverted-to.pdf>] [15 <./u_solutions-eps-converted-to.pdf>] [16 <./w_solutions-e
+ps-converted-to.pdf>] [17 <./vel_via_diff-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <max_slopes.eps>
-(epstopdf)                    date: 2017-04-10 00:01:54
-(epstopdf)                    size: 64603 bytes
+(epstopdf)                    date: 2017-04-16 22:53:39
+(epstopdf)                    size: 64416 bytes
 (epstopdf)             Output file: <max_slopes-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-04-09 23:44:57
-(epstopdf)                    size: 27917 bytes
+(epstopdf)                    date: 2017-04-16 22:57:27
+(epstopdf)                    size: 27952 bytes
 (epstopdf)             Command: <repstopdf --outfile=max_slopes-eps-converted-t
 o.pdf max_slopes.eps>
-(epstopdf)             \includegraphics on input line 319.
-runsystem(repstopdf --outfile=max_slopes-eps-converted-to.pdf max_slopes.eps)..
-.executed safely (allowed).
+(epstopdf)             \includegraphics on input line 412.
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <max_slopes-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-04-10 00:02:48
-(epstopdf)                    size: 27950 bytes.
-
-<max_slopes-eps-converted-to.pdf, id=40, 469.755pt x 384.43625pt>
+<max_slopes-eps-converted-to.pdf, id=99, 469.755pt x 384.43625pt>
 File: max_slopes-eps-converted-to.pdf Graphic file (type pdf)
 
 <use max_slopes-eps-converted-to.pdf>
-Package pdftex.def Info: max_slopes-eps-converted-to.pdf used on input line 319
+Package pdftex.def Info: max_slopes-eps-converted-to.pdf used on input line 412
 .
 (pdftex.def)             Requested size: 390.0pt x 319.16412pt.
- [8] [9 <./delta_solutions-eps-converted-to.pdf>] [10 <./eta_solutions-eps-conv
-erted-to.pdf>] [11 <./u_solutions-eps-converted-to.pdf>] [12 <./w_solutions-eps
--converted-to.pdf>] [13 <./vel_via_diff-eps-converted-to.pdf>] [14 <./max_slope
-s-eps-converted-to.pdf>]
-(./nondimensional.aux) ) 
+Package epstopdf Info: Source file: <max_shearsq.eps>
+(epstopdf)                    date: 2017-04-21 00:47:04
+(epstopdf)                    size: 82871 bytes
+(epstopdf)             Output file: <max_shearsq-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-04-21 00:47:52
+(epstopdf)                    size: 35476 bytes
+(epstopdf)             Command: <repstopdf --outfile=max_shearsq-eps-converted-
+to.pdf max_shearsq.eps>
+(epstopdf)             \includegraphics on input line 418.
+Package epstopdf Info: Output file is already uptodate.
+
+<max_shearsq-eps-converted-to.pdf, id=100, 475.7775pt x 386.44376pt>
+File: max_shearsq-eps-converted-to.pdf Graphic file (type pdf)
+
+<use max_shearsq-eps-converted-to.pdf>
+Package pdftex.def Info: max_shearsq-eps-converted-to.pdf used on input line 41
+8.
+(pdftex.def)             Requested size: 390.0pt x 316.78569pt.
+ [18] [19 <./max_slopes-eps-converted-to.pdf>] [20 <./max_shearsq-eps-converted
+-to.pdf>]
+Package epstopdf Info: Source file: <witch_bathymetry.eps>
+(epstopdf)                    date: 2017-04-21 10:20:06
+(epstopdf)                    size: 79920 bytes
+(epstopdf)             Output file: <witch_bathymetry-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-04-21 10:22:43
+(epstopdf)                    size: 33653 bytes
+(epstopdf)             Command: <repstopdf --outfile=witch_bathymetry-eps-conve
+rted-to.pdf witch_bathymetry.eps>
+(epstopdf)             \includegraphics on input line 450.
+Package epstopdf Info: Output file is already uptodate.
+
+<witch_bathymetry-eps-converted-to.pdf, id=121, 480.79625pt x 387.4475pt>
+File: witch_bathymetry-eps-converted-to.pdf Graphic file (type pdf)
+
+<use witch_bathymetry-eps-converted-to.pdf>
+Package pdftex.def Info: witch_bathymetry-eps-converted-to.pdf used on input li
+ne 450.
+(pdftex.def)             Requested size: 390.0pt x 314.28596pt.
+Package epstopdf Info: Source file: <witch_eta.eps>
+(epstopdf)                    date: 2017-04-21 10:20:13
+(epstopdf)                    size: 389724 bytes
+(epstopdf)             Output file: <witch_eta-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-04-21 10:22:43
+(epstopdf)                    size: 123965 bytes
+(epstopdf)             Command: <repstopdf --outfile=witch_eta-eps-converted-to
+.pdf witch_eta.eps>
+(epstopdf)             \includegraphics on input line 456.
+Package epstopdf Info: Output file is already uptodate.
+
+<witch_eta-eps-converted-to.pdf, id=122, 467.7475pt x 399.4925pt>
+File: witch_eta-eps-converted-to.pdf Graphic file (type pdf)
+
+<use witch_eta-eps-converted-to.pdf>
+Package pdftex.def Info: witch_eta-eps-converted-to.pdf used on input line 456.
+
+(pdftex.def)             Requested size: 390.0pt x 333.10872pt.
+ [21 <./witch_bathymetry-eps-converted-to.pdf>] [22 <./witch_eta-eps-converted-
+to.pdf>] (./nondimensional.aux) ) 
 Here is how much of TeX's memory you used:
- 2562 strings out of 493014
- 34705 string characters out of 6133351
- 102852 words of memory out of 5000000
- 6068 multiletter control sequences out of 15000+600000
+ 2577 strings out of 493014
+ 35206 string characters out of 6133351
+ 103852 words of memory out of 5000000
+ 6080 multiletter control sequences out of 15000+600000
  13024 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,8n,24p,805b,225s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2016/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmex10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmmi12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmmi8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr17.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/c
-msy6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cms
-y8.pfb>
-Output written on nondimensional.pdf (14 pages, 973949 bytes).
+ 38i,8n,24p,1330b,227s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2016/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr17.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmsy6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmsy8.pfb>
+Output written on nondimensional.pdf (22 pages, 1165965 bytes).
 PDF statistics:
- 129 PDF objects out of 1000 (max. 8388607)
- 83 compressed objects within 1 object stream
+ 173 PDF objects out of 1000 (max. 8388607)
+ 112 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,0 +1,217 @@
+\documentclass[12pt]{article}
+
+\usepackage{natbib,amsfonts,graphics,amsmath}
+\usepackage{graphicx}
+
+\include{newcommands}
+
+\begin{document}
+	
+	\title{The nondimensional lee wave equations and the Froude number\\
+		\large or, squeezing stratified flow}
+	
+	\author{Oliver Fringer and Eric Mayer}
+	
+	\maketitle
+	
+	\section{Abstract}
+	We nondimensionalize the 2D boussinesq equations describing the flow of infinite depth water over a ridge of height, $h_0$, and width, $2\pi/k$, with uniform upstream velocity, $U$, and buoyancy frequency $N^2=-\frac{g}{\rho_0}\D{\bar{\rho}}{z}$. We choose $U$ and $N$ as our free parameters and find that the equations have dynamical similarity based on the dimensionless numbers $\epsilon=\frac{Uk}{N}$ and $J=\frac{Nh_0}{U}$. We then use our scaling to show that, although it looks like an inverse Froude number, $J$ is in fact the square of an internal Froude number, defined as $Fr_i^2=\frac{u_0^2}{g'\delta}$. This curious inversion of one's intuition reflects the fact that the vertical scale of flow over the ridge, $\delta$ is not set by the ridge's height, but by the vertical wavelength of the lee wave, $N/U$.
+	
+	This relation, however, breaks down if the  $h_0\geq O(N/U)$, at which point the flow becomes hydraulically controlled, with the internal Froude number held constant at 1 \citep{Winters2012}. Thereafter, $\frac{Nh_0}{U}$ informs instead the degree of blocking. It is as if these hills larger than a buoyancy wavelength have squeezed all the juice out of the upstream stratified flow. Hence we term this square of an internal Froude number $J$ for Juice. 
+	
+	\section{Introduction}
+	
+%	In its most generally accepted use, the Froude number represents a ratio of the speed with which two processes,  advection and wave propagation, carry information of a disturbance away from its site of generation. Most of us first meet a Froude number when studying the open channel flow of a single density hydrostatic fluid. Here, the Froude number is given by $Fr=U/\sqrt{gd}$, where $d$ is the depth of the fluid. When $Fr<O(1)$ throughout the channel, any disturbance in the flow is able to travel away by waves both upstream and downstream. Alternatively, when $Fr>O(1)$ everywhere, disturbances are rapidly swept downstream by the current. 
+	
+	In its most generally accepted use, the Froude number represents a ratio of the speed with which two processes,  advection and wave propagation, carry information of a disturbance throughout the system. Most of us first meet a Froude number when studying the open channel flow of a single density hydrostatic fluid. Here, the Froude number is given by $Fr=U/\sqrt{gd}$, where $d$ is the local depth of the fluid. When $Fr<1$, a disturbance in the flow is carried up and downstream by waves, and thus the local state of the flow can be altered by disturbances both up and downstream. Alternatively, when $Fr>1$, disturbances are rapidly swept downstream by the current, and only those generated upstream can change the local state. 
+	
+	The special case of $F=1$ demands an alternative view the Froude number as the partitioning of the flow's energy between potential ($gd$) and kinetic  ($U^2$) energy. A flow with a given total energy $E$ can conceivably partition its energy into a spectrum of configurations from entirely potential ($Fr=0$) to almost entirely kinetic ($Fr \to \infty$). However, the volume flux of the flow, $q=Ud$, is not constant over this spectrum, as clearly a flow with all potential energy has no flow. Rather, for a given energy, the flow acheives its maximum volume flux when $Fr=1$.  For a more thorough review, see Baines, Chaper 2. 
+	
+%	a constant flux, $q=Ud$, and a total energy, $E$ can exist in either the potential-dominated subcritical regime or the kinetic-dominated supercritical regime, provided that $E>E_c$, where $E_c$ is the minimum energy that satisfies a given flow rate. And it is this flow with of minimizing energy for which $Fr=1$.  For a more thorough review, see Baines, Chaper 2. 
+	
+	The addition of a topographic feature to the system adds at least two new length scales, namely, the obstacle's height, $h_0$, and width, $L$, permitting two more dimensionless numbers that are tempting to call Froudes. Indeed, Froude's work focused on the wake of ships, for which $U/\sqrt{gL}$ is the most relevant dynamical parameter \citep{Baines1995}.  The additional introduction of stratification produces a fourth length scale in the form of the wavelength of a characteristic internal gravity wave, and generates a new set of Froude looking dimensionless numbers. However, not all of these numbers represent a ratio of advective to wave transmition, and thus calling all of these parameters Froude numbers robs the concept of its intuitive dynamic significance. In his seminal text on stratified flow over topography, Baines proposed that, as a solution to this ``Froude for everything syndrome,'' we call only the most obvious extension of open channel flow a Froude number; that is,  $Fr=U/ND$, where $ND$ is the speed of the first mode internal gravity wave \citep{Baines1995}. 
+
+	For oceanic flows away from continents or mid ocean ridges, however, $Fr=U/ND$ is often very small, and the dynamics of the flow are captured nearly as well by considering the mathematically more simple infinitely deep ocean (e.g. \cite{Long1953a}). For example, in the Drake Passage region of the Antarctic Circumpolar Current, where lee waves are predicted to be especially dynamically important \citep{Nikurashin2010a}, typical values for dimensional quantities are $U \approx 0.1$~m~s$^{-1}$, $N \approx 10^-3$~rad~s$^{-1}$, and $D \approx 4000$~m, giving $U/ND \approx 0.025$. 
+	
+	Instead, much of the literature focuses on the dynamical significance of the number $Nh_0/U$, and chooses to call it a variety of creative names. Miles calls it the Russel number, $Ru$, principally so that the dimensionless number describing geophysical flows may be remembered by the vowel ordered set $Ra$, $Re$, $Ri$, $Ro$, $Ru$ \citep{Miles1969}. Aguilar and Sutherland call it the Long number, $Lo$, in honor of Robert Long's pioneering work on the lee wave problem \citep{Aguilar2006a,Long1953a}. Nikurashin and Ferrari call it a steepness parameter and use the symbol $\epsilon$, after showing that in the hydrostatic limit, it is identical to the ratio of topographic slope to wave ray slope, a parameter popular in the internal tides literature \citep{Nikurashin2010a}. And of course, much of the literature simply calls $Nh/U$ and inverse Froude number \citep{Legg2008a,Klymak2010,Eckermann2010,Winters2012}.
+	
+	By nondimensionalizing the equations describing this flow, however, we will show that $Nh/U$ is in fact the square of what Winters and Armi call the flow's ``layer'' Froude number, provided that the height of the topography remains smaller than the wavelength of an internal gravity wave. 
+	
+	
+	\section{Nondimensional equations} \label{eq:equations}
+	
+	The flow of an unbounded fluid over an isolated hill of height, $h_0$, and width, $2\pi/k$ is characterized by the dimensional quantities
+	$U$, $k$, $N$, and $h_0$, where $U$ and $N$ are the constant horizontal velocity and buoyancy upstream of the hill.  Choosing $U$ and $N$ to nondimensionalize $k$ and $h_0$, the governing
+	nondimensional parameters are $J = N h_0/U$ and $\epsilon = k U/N$. 
+	
+	Let $\ub_{\mbox{total}} = U {\bf e}_x + \ub'$, $\rho_{\mbox{total}} = \rhobar(z) + \rho'$, and
+	$p_{\mbox{total}} = \rho_0 \overline{p}(z) + \rho_0 p'$.
+	Making the Boussinesq approximation, the steady momentum and density transport equations are given by
+	\begin{eqnarray*}
+	U \D{u'}{x} + \ub'\cdot\nabla u' &=& -\D{p'}{x}\,,\\
+	U \D{w'}{x} + \ub'\cdot\nabla w' &=& -\D{p'}{z} - \frac{\rho'}{\rho_0} g\,,\\
+	U \D{\rho'}{x} + \ub'\cdot\nabla\rho' &=& \frac{\rho_0 N^2}{g} w\,,
+	\end{eqnarray*}
+	where $N^2 = -g/\rho_0 \partial\rhobar/\partial z$, subject to continuity $\nabla\cdot\ub'=0$, and
+	the kinematic bottom boundary condition
+	\[
+	U\D{h}{x} + u' \D{h}{x} = w'\,.
+	\]  
+	Nondimensionalize with
+	\begin{eqnarray*}
+		u' &=& u_0 u^*\,,\\
+		w' &=& w_0 w^*\,,\\
+		\rho' &=& R \rho^*\,,\\
+		p' &=& P p^*\,,\\
+		x &=& k^{-1} x^*\,,\\
+		z &=& \delta z^*\,.
+	\end{eqnarray*}
+	Nondimensionalizing the kinematic bottom boundary condition gives
+	(omitting the $*$ on nondimensional variables)
+	\[
+	k U h_0 \D{h}{x} + k u_0 h_0 \D{h}{x} = w_0 w\,.
+	\]
+	If we require a balance between the linear terms, this implies $w_0 = k h_0 U$, so that
+	\[
+	\D{h}{x} + \frac{u_0}{U} \D{h}{x} = w\,.
+	\]
+	Now, the vertical scale of the flow as given by $\delta$ is not the
+	same as the hill height $h_0$, since $\delta$ must be finite as $h_0\to 0$ (the linear limit). The 
+	vertical scale is thus dictated by continuity, which requires
+	\[
+	k u_0 \D{u}{x} + \frac{w_0}{\delta} \D{w}{z} = 0\,,
+	\]
+	or, since this implies $k u_0 = w_0/\delta$, then we must have $\delta = w_0/(k u_0) = k h_0 U/(k u_0) = h_0U/u_0$.
+	Nondimensionalizing the $u$-momentum equation,
+	\begin{eqnarray*}
+	k u_0 U \D{u}{x} + k u_0^2\ub\cdot\nabla u  &=& -k P \D{p}{x}\,.
+	\end{eqnarray*}
+	Since we require a leading-order balance between the pressure gradient and the linear momentum advection term,
+	we must have $P = u_0 U$, which gives
+	\begin{eqnarray*}
+	\D{u}{x} + \frac{u_0}{U} \ub\cdot\nabla u &=& -\D{p}{x}\,.
+	\end{eqnarray*}
+	The nondimensional density transport equation is given by
+	\[
+	k U R \D{\rho}{x} + k u_0 R \ub\cdot\nabla\rho = \frac{k \rho_0 h_0 N^2 U}{g} w\,.
+	\]
+	If we require a balance between the linear advection terms, then the scale for the density
+	perturbation is 
+	\[
+	R = \frac{\rho_0 N^2 h_0}{g}\,,
+	\]
+	so that the nondimensional density equation is
+	\[
+	\D{\rho}{x} + \frac{u_0}{U} \ub\cdot\nabla\rho = w\,.
+	\]
+	Nondimensionalizing the vertical momentum equation, we have
+	\[
+	k^2 h_0 U^2 \D{w}{x} + k^2 h_0 u_0^2\ub\cdot\nabla w = -\frac{P}{\delta}\D{p}{z} - \frac{g R}{\rho_0} \rho\,.
+	\]
+	If we require a vertical hydrostatic balance to leading order, then we must have 
+	\[
+	\frac{P}{\delta} = \frac{g R}{\rho_0} 
+	= N^2 h_0\,,
+	\]
+	and
+	\[
+	P = \delta N^2h_0
+	= \frac{N^2h_0^2U}{u_0}.
+	\]
+	%\[
+	%P = \frac{g R \delta}{\rho_0} 
+	%  = \frac{g}{\rho_0} \frac{\rho_0 N^2 h_0}{g} \frac{h_0}{F}
+	%  = \frac{g}{\rho_0} \frac{\rho_0 N^2 h_0}{g} \frac{U}{N}
+	%  = U N h_0\,.
+	%\]
+	which gives
+	\[
+	\epsilon^2 \left(\D{w}{x} + \frac{u_0}{U}\ub\cdot\nabla w\right) = -\D{p}{z} - \rho\,,
+	\]
+	where 
+	\[
+	\epsilon = \frac{Uk}{N}
+	\]
+	is the nonhydrostatic parameter, and represents a ratio of the frequency with which the flow over the hill excites a wave, $Uk$, to the frequency of buoyancy's response, N. In analogy to a boxer at a speed-bag, a propagating wave is only possible if the excitation frequency allows buoyancy enough time to bounce back ($\epsilon<1$). Within this propagating regime, one can also think of $\epsilon$ as a ratio of the wavelength of the wave to the width of the hill. For waves much smaller than the hill is long ($\epsilon<<1$), the wave is approximately hydrostatic and the group velocity of the wave (in the reference frame of the hill) is oriented vertically. 
+	
+	Now, returning to the pressure, since from the vertical momentum equation we
+	require $P = N^2h_0^2U u_0^{-1}$ and from the horizontal momentum equation we require $P = u_0 U$, then equating the
+	two implies that $u_0 = N h_0$ and thus
+	\[
+	\frac{u_0}{U} = \frac{N h_0}{U} \equiv J\,.
+	\]
+	Therefore, in terms of $J$, the governing nondimensional equations are given by
+	\begin{eqnarray*}
+		\D{u}{x} + J\ub\cdot\nabla u &=& -\D{p}{x}\,,\\
+		\epsilon^2 \left(\D{w}{x} + J\ub\cdot\nabla w\right) &=& -\D{p}{z} - \rho\,,\\
+		\D{\rho}{x} + J \ub\cdot\nabla\rho &=& w\,,
+	\end{eqnarray*}
+	subject to $\nabla\cdot\ub=0$ and the kinematic bottom boundary condition
+	\[
+	\left(1 + J \right)\D{h}{x} = w\,.
+	\]
+	These nondimensional equations are consistent with the original nondimensionalization which implied
+	that the problem is uniquely characterized by $\epsilon$ and $J$.
+	The relevant scales (nondimensionalized by $N$ and $U$) are given by
+	\begin{eqnarray*}
+		\frac{u_0}{U} &=& J\,,\\
+		\frac{w_0}{U} &=& \epsilon J\,,\\
+		\frac{gR}{\rho_0 U N} &=& J\,,\\
+		\frac{P}{U^2} &=& J\,,\\
+		\frac{\delta N}{U} &=& 1\,.
+	\end{eqnarray*}
+	Finally,  if we define the internal Froude number as
+	$Fr_\delta = u_0/\sqrt{g' \delta}$, where $g'\delta =g (R/\rho_0) \delta = J U^2$, this gives
+	$Fr_{\delta} = J^{1/2}$. Thus although it looks like an inverse Froude number when expressed in outer variables, this scaling shows that it is
+	in fact appropriate to refer to $J$ as the square of an internal Froude number 
+	
+%	That is,  $J^{1/2}$ can be thought of as 
+%	the ratio of the inertial to gravitational forces arising from the perturbed
+%	flow above the hill. Although we would expect a larger $N$ to block the flow and
+%	reduce the magnitude of the perturbation above the hill, the scaling shows that
+%	$u_0 = J U$, implying that the perturbation velocity above the sill increases in step with
+%	increasing $J$. However, the gravitational force resulting from the perturbation is
+%	given by $\sqrt{g'\delta} = J^{1/2} U$, which grows more slowly than $u_0$ with
+%	increasing $J$.
+
+
+	\section{Discussion}
+	
+		That the outer and inner variable representations of $J$ should present velocity and gravity inversely highlights a unique element of this problem's physics. In the limit of subcritical bathymetry, for which the bottom boundary condition becomes linear,  there is no vertical scale imposed upon the vertical perturbation from any boundary condition. Rather, the vertical scale of the wave must come from properties of the fluid itself, hence the scaling $\delta = U/N$. 
+	
+	This does not, however, indicate that the height of the topography is irrelevant to the potential energy of the flow, only that it plays a higher order role in the kinetic energy. Holding $\delta=U/N$ constant, the scaling shows that $u_0 = J U$, implying that the perturbation velocity above the sill increases in step with increasing $J$, and thus with increasing $h_0$. However, the gravitational force resulting from the perturbation is given by $\sqrt{g'\delta} = J^{1/2} U$, which grows with half the power of $h_0$ as $u_0$. This is because $h_0$ can only enter into the first term of the potential energy side of the Froude number, $g'$. 
+	
+	Conceptually, we can picture a column of water headed for an isolated hill. As it approaches the hill, it enters the wave field, and some elements are lifted in preparation for a race across the crest. The height of this lift must be enough to overtop the hill, and scales with $h_0$. Then buoyancy acts on these lifted parcels, translating the wave's potential energy into kinetic energy. This is the source of the perturbation velocity over the hill, as indicated by the scaling $u_0=JU=Nh_0$.  As the column reaches the crest of the hill, its elements are all $h_0$ higher than they were, thus the density perturbation, and the resulting reduced gravity to work against for potential energy, also scales with $h_0$. We see this in the scaling $g'=g (R/\rho_0)=JUN=U^2h_0$. However, the length scale of this work against gravity is the wavelength, $\delta$, which is oblivious to $h_0$. Hence the scaling $\sqrt{g'\delta} = J^{1/2} U = \sqrt{Nh_0U}$. 
+	
+	This identification of $J$ as the internal froude number squared appears to have gone without notice in the 65 years of studying Long's model. However, an inquiry into the upper limit of this relationship recently emerged from consideration of blocked flow past a half cylinder \citep{Winters2012}. In the blocked regime, that is, for flow in which $J>1$, the lowest fluid elements upstream of the obstacle lack sufficient kinetic energy to overtop the obstacle, and thus form a pool of stagnant fluid at the obstacle's base \citep{Baines1995}. As a result, the obstacle takes on the apparent height to the unblocked flow of U/N, that is, exactly the height of the flow's kinetic hill-climbing capacity, giving $J_{unblocked}=1$. In this case, Winter's and Armi show that the internal Froude number above the hill is exactly 1, and in analogy to hydraulic control of an unstratified river, the flow exhibits a transition from subcritical flow upstream to a supercritical jet downstream followed by a dissipative hydraulic jump. In other words, the relation between $J$ and $Fr_{\delta}$ holds only up to $J=Fr_{\delta}^2$=1. Above this limit, $Fr_{\delta}^2$=1, and $J$ informs the depth of the stagnant layer as well as the thickness and speed of the accelerated jet resulting from hydraulic control \citep{Winters2012}.
+	
+	That $J$ as a Froude number only holds up until the critical limit $J=1$ has perhaps prevented its general interpretation as a Froude number. Nonetheless, in the subcritical regime, $J^{1/2}=(Nh_0/U)^{1/2}=u_0/\sqrt{g'\delta}$ carries the true meaning of a Froude number, relating the speed with which the competing processes of advective non-linearities and gravity waves respond to the introduction of bathymetry into the flow. When $J$ is small, waves accommodate the disturbance adiabatically, and carry it away from the site of generation, just as in an unstratified river flowing over a sub-critical sill. As $J$ approaches 1, the two processes come into balance, and the volume flux above the hill approaches its maximum potential. 
+	
+	The unique element of this system is that the volume flux never backs off from this maximum with $J>1$. That is, so long as the height of the hill is still significantly shorter than the depth of the fluid (so that the assumption of infinite depth remains valid), the flow will always adjust such that the apparent height is not greater than the flux maximizing $\delta=U/N$. In this sense, the upstream characteristics of the flow present the system with a wave making capacity, and it is up top the hill to squeeze the wave into existence. But there is only so much juice in the fruit. 
+	
+%	reflecting hydraulic control and a local energy sink, in analogy to a hydraulic jump downstream of open channel flow over a critical height.
+	
+	
+	
+%Winters an Armi's analysis highlights an essential difference between this problem and the single layer channel flow from which our standard understanding of the Froude number derives. Consider the subcritical limit, in which $h$ is much less than $U/N$. Here the ``depth'' of the fluid as it travels over bathymetry is oblivious to both the ocean's depth and the bathymetry's height, and is instead entirely specified according to the impinging flow's properties, namely U and N. 	
+
+%	While we would  expect a larger $N$ to block the flow and
+%	reduce the magnitude of the perturbation above the hill, the scaling shows that
+%	$u_0 = J U$, implying that the perturbation velocity above the sill increases in step with
+%	increasing $J$. However, the gravitational force resulting from the perturbation is
+%	given by $\sqrt{g'\delta} = J^{1/2} U$, which grows more slowly than $u_0$ with increasing $J$.	
+	
+%	(In the 2-D case, blocking is an adiabatic advective process while span wise vorticity generation and downslope winds are diabatic. In the 3-D case, horizontal splitting is an adiabatic advective response while vertical vorticity generation represents a nearly adiabatic advective non-linearity with the unique capacity to carry energy away from the site of generation.)
+	
+
+
+
+	
+	%Understanding the kinetic energy in the wave is more nuanced. Beginning with the denominators in the relation $J^{1/2}=(Nh_0/U)^{1/2}=u_0/\sqrt{g'\delta}$, and multiplying $J=Nh_0/U$ by $U/U$ for dimensional consistency, we have $\sqrt{g'\delta}= U$, this expresses that the gravity wave response exists as a direct consequence of the background velocity. Indeed, in the frame of reference moving with the water, U is the magnitude of the group velocity of this wave (as both borne out in the math and evidenced by observation of the steady state hydrostatic wave standing motionless above a hill). Similarly, considering the numerators: $(Nh_0U)^{1/2}=u_0$, we see that perturbation velocity above the hill is a direct consequence of buoyancy's attempt to restore an element to its equilibrium position, where the maximum possible displacement is the height of the hill. 
+	
+	
+	
+\bibliographystyle{elsarticle-harv}
+\bibliography{bibliography}
+	
+\end{document}

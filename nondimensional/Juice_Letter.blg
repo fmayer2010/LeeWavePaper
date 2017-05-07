@@ -1,0 +1,56 @@
+This is BibTeX, Version 0.99d (TeX Live 2016)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Juice_Letter.aux
+The style file: elsarticle-harv.bst
+Database file #1: bibliography.bib
+Repeated entry---line 1911 of file bibliography.bib
+ : @book{Baines1995
+ :                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3736 of file bibliography.bib
+ : @article{Nikurashin2010a
+ :                         ,
+I'm skipping whatever remains of this entry
+Warning--there's a number but no volume in Miles1969
+You've used 9 entries,
+            2821 wiz_defined-function locations,
+            703 strings with 6234 characters,
+and the built_in function-call counts, 4244 in all, are:
+= -- 455
+> -- 176
+< -- 7
++ -- 66
+- -- 57
+* -- 362
+:= -- 763
+add.period$ -- 27
+call.type$ -- 9
+change.case$ -- 63
+chr.to.int$ -- 9
+cite$ -- 10
+duplicate$ -- 156
+empty$ -- 304
+format.name$ -- 86
+if$ -- 854
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 10
+newline$ -- 37
+num.names$ -- 36
+pop$ -- 55
+preamble$ -- 1
+purify$ -- 55
+quote$ -- 0
+skip$ -- 120
+stack$ -- 0
+substring$ -- 277
+swap$ -- 19
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 78
+warning$ -- 1
+while$ -- 42
+width$ -- 0
+write$ -- 107
+(There were 2 error messages)

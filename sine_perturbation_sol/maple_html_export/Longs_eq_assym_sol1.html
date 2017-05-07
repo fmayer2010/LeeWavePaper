@@ -1,0 +1,454 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Longs_eq_assym_sol1.html</title>
+<!-- Created by Maple 2016.2, Mac OS X -->
+</head>
+<a name="MapleAutoBookmark1" />
+
+<body bgcolor="FFFFFF">
+<p align="left"><font color="#000000" size="3" face="Times New Roman">This document checks the algebra involved in my asymptotic solution to Long's Hydrostatic Model: </font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_1.gif" width="186" height="43" alt="`+`(diff(delta(x, z), x, x), `*`(`^`(l, 2), `*`(delta(x, z)))) = 0" align="center" border="0"></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_2.gif" width="182" height="43" alt="`+`(diff(diff(delta(x, z), x), x), `*`(`^`(l, 2), `*`(delta(x, z)))) = 0" align="center" border="0"></td>
+<td width='5%' align='center'>(1)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">subject to the nonlinear bottom boundary condition <img src="images/Longs_eq_assym_sol_3.gif" width="133" height="21" alt="delta(x, h(x)) := h(x)" align="center" border="0"></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_4.gif" width="40" height="18" alt="h(x)" align="center" border="0"></td>
+<td width='5%' align='center'>(2)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">and the Sommerfeld radiation condition appropriate for infinite depth (that is, all waves radiate away from the bottom).</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">For the sake of simplicity, this solution assumes a single component of bathymetry</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_5.gif" width="134" height="18" alt="h := proc (x) options operator, arrow; `*`(A, `*`(cos(`*`(k, `*`(x))))) end proc" align="center" border="0"></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_6.gif" width="100" height="18" alt="proc (x) options operator, arrow; `*`(A, `*`(cos(`*`(k, `*`(x))))) end proc" align="center" border="0"></td>
+<td width='5%' align='center'>(3)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">I expand δ in powers of the small parameter </font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_7.gif" width="62" height="18" alt="J := `*`(A, `*`(l))" align="center" border="0"></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_8.gif" width="27" height="18" alt="`*`(A, `*`(l))" align="center" border="0"></td>
+<td width='5%' align='center'>(4)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">such that <img src="images/Longs_eq_assym_sol_9.gif" width="372" height="27" alt="delta := proc (x, z) options operator, arrow; `+`(delta__0(x, z), `*`(J, `*`(delta__1(x, z))), `*`(`^`(J, 2), `*`(delta__2(x, z))), O(`*`(A, `*`(`^`(J, 3))))) end proc" align="center" border="0"></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_10.gif" width="344" height="27" alt="proc (x, z) options operator, arrow; `+`(delta__0(x, z), `*`(J, `*`(delta__1(x, z))), `*`(`^`(J, 2), `*`(delta__2(x, z))), O(`*`(A, `*`(`^`(J, 3))))) end proc" align="center" border="0"></td>
+<td width='5%' align='center'>(5)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">To generate solutions that satisfy the bottom boundary condition, we will need to taylor expand δ around z=0</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_11.gif" width="608" height="43" alt="h(x) = `+`(delta(x, 0), `*`(h(x), `*`(eval(diff(delta(x, z), z), z = 0))), `*`(`^`(h(x), 2), `*`(eval(diff(delta(x, z), z, z), z = 0))), O(`*`(A, `*`(`^`(J, 3)))))" align="center" border="0"></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_12.gif" width="768" height="44" alt="`*`(A, `*`(cos(`*`(k, `*`(x))))) = `+`(delta__0(x, 0), `*`(A, `*`(l, `*`(delta__1(x, 0)))), `*`(`^`(A, 2), `*`(`^`(l, 2), `*`(delta__2(x, 0)))), `*`(2, `*`(O(`*`(`^`(A, 4), `*`(`^`(l, 3)))))), `*`(A, ..." align="center" border="0"><br><img src="images/Longs_eq_assym_sol_13.gif" width="768" height="48" alt="`*`(A, `*`(cos(`*`(k, `*`(x))))) = `+`(delta__0(x, 0), `*`(A, `*`(l, `*`(delta__1(x, 0)))), `*`(`^`(A, 2), `*`(`^`(l, 2), `*`(delta__2(x, 0)))), `*`(2, `*`(O(`*`(`^`(A, 4), `*`(`^`(l, 3)))))), `*`(A, ..." align="center" border="0"></td>
+<td width='5%' align='center'>(6)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">This is a bit of a mess. Let's begin with the zeroth order solution (and neglect to write O() in what follows)</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_14.gif" width="125" height="26" alt="delta := proc (x, z) options operator, arrow; delta__0(x, z) end proc" align="center" border="0"> </font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_15.gif" width="110" height="26" alt="proc (x, z) options operator, arrow; delta__0(x, z) end proc" align="center" border="0"></td>
+<td width='5%' align='center'>(7)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">And the zeroth order boundary condition</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_16.gif" width="104" height="21" alt="h(x) = delta(x, 0)" align="center" border="0"></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_17.gif" width="140" height="26" alt="`*`(A, `*`(cos(`*`(k, `*`(x))))) = delta__0(x, 0)" align="center" border="0"></td>
+<td width='5%' align='center'>(8)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Upon appeal to Long's Model, we find the "linear" solution to the lee wave</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_18.gif" width="181" height="26" alt="delta__0 := proc (x, z) options operator, arrow; `*`(A, `*`(cos(`+`(`*`(k, `*`(x)), `*`(l, `*`(z)))))) end proc" align="center" border="0"></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_19.gif" width="161" height="18" alt="proc (x, z) options operator, arrow; `*`(A, `*`(cos(`+`(`*`(k, `*`(x)), `*`(l, `*`(z)))))) end proc" align="center" border="0"></td>
+<td width='5%' align='center'>(9)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Now we'll go for the 1st order solution</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_20.gif" width="207" height="26" alt="delta := proc (x, z) options operator, arrow; `+`(delta__0(x, z), `*`(J, `*`(delta__1(x, z)))) end proc" align="center" border="0"></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_21.gif" width="187" height="26" alt="proc (x, z) options operator, arrow; `+`(delta__0(x, z), `*`(J, `*`(delta__1(x, z)))) end proc" align="center" border="0"></td>
+<td width='5%' align='center'>(10)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">And the 1st order taylor expansion of the bottom boundary condition</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_22.gif" width="420" height="38" alt="0 = simplify(`+`(`-`(h(x)), eval(`+`(delta(x, z), `*`(h(x), `*`(diff(delta(x, z), z)))), z = 0)))" align="center" border="0"></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_23.gif" width="484" height="57" alt="0 = `*`(A, `*`(l, `*`(`+`(`*`(A, `*`(cos(`*`(k, `*`(x))), `*`(eval(diff(delta__1(x, z), z), {z = 0})))), `-`(`*`(A, `*`(cos(`*`(k, `*`(x))), `*`(sin(`*`(k, `*`(x))))))), delta__1(x, 0)))))" align="center" border="0"></td>
+<td width='5%' align='center'>(11)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Rearranging and recognizing that </font><font color="#000000" size="3" face="Times New Roman"><em>d/dz</em></font><font color="#000000" size="3" face="Times New Roman"> is proportional to </font><font color="#000000" size="3" face="Times New Roman"><em>l</em></font><font color="#000000" size="3" face="Times New Roman">, we have</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_24.gif" width="268" height="27" alt="0 = `+`(`*`(A, `*`(l, `*`(delta__1(x, 0)))), `-`(`*`(`^`(A, 2), `*`(l, `*`(cos(`*`(k, `*`(x))), `*`(sin(`*`(k, `*`(x)))))))))" align="center" border="0"></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_25.gif" width="256" height="27" alt="0 = `+`(`*`(A, `*`(l, `*`(delta__1(x, 0)))), `-`(`*`(`^`(A, 2), `*`(l, `*`(cos(`*`(k, `*`(x))), `*`(sin(`*`(k, `*`(x)))))))))" align="center" border="0"></td>
+<td width='5%' align='center'>(12)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Now recall the trig identity, <img src="images/Longs_eq_assym_sol_26.gif" width="161" height="18" alt="trigsubs(`*`(cos(x), `*`(sin(x))))" align="center" border="0"></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_27.gif" width="99" height="39" alt="[`+`(`*`(`/`(1, 2), `*`(sin(`+`(`*`(2, `*`(x)))))))]" align="center" border="0"></td>
+<td width='5%' align='center'>(13)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">And thus we have </font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_28.gif" width="174" height="39" alt="delta__1(x, 0) := `+`(`*`(`/`(1, 2), `*`(A, `*`(sin(`+`(`*`(2, `*`(k, `*`(x)))))))))" align="center" border="0"></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_29.gif" width="108" height="39" alt="`+`(`*`(`/`(1, 2), `*`(A, `*`(sin(`+`(`*`(2, `*`(k, `*`(x)))))))))" align="center" border="0"></td>
+<td width='5%' align='center'>(14)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">And upon appeal to Long's Model, we find</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_30.gif" width="207" height="39" alt="delta__1 := proc (x, z) options operator, arrow; `+`(`*`(`/`(1, 2), `*`(A, `*`(sin(`+`(`*`(2, `*`(k, `*`(x))), `*`(l, `*`(z)))))))) end proc" align="center" border="0"></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_31.gif" width="194" height="39" alt="proc (x, z) options operator, arrow; `+`(`*`(`/`(1, 2), `*`(A, `*`(sin(`+`(`*`(2, `*`(k, `*`(x))), `*`(l, `*`(z)))))))) end proc" align="center" border="0"></td>
+<td width='5%' align='center'>(15)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Now let's go for the 2nd order accurate solution</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_32.gif" width="295" height="27" alt="delta := proc (x, z) options operator, arrow; `+`(delta__0(x, z), `*`(J, `*`(delta__1(x, z))), `*`(`^`(J, 2), `*`(delta__2(x, z)))) end proc" align="center" border="0"></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_33.gif" width="270" height="27" alt="proc (x, z) options operator, arrow; `+`(delta__0(x, z), `*`(J, `*`(delta__1(x, z))), `*`(`^`(J, 2), `*`(delta__2(x, z)))) end proc" align="center" border="0"></td>
+<td width='5%' align='center'>(16)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Plug in what we know to the 2nd order accurate taylor expansion of the bottom boundary condition:</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_34.gif" width="768" height="38" alt="0 = simplify(`+`(`-`(h(x)), delta(x, 0), `*`(h(x), `*`(eval(diff(delta(x, z), z), z = 0))), `*`(`^`(h(x), 2), `*`(eval(diff(delta(x, z), z, z), z = 0)))), {`*`(cos(`*`(k, `*`(x))), `*`(sin(`*`(k, `*`(..." align="center" border="0"></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_35.gif" width="768" height="53" alt="0 = `+`(`*`(`^`(A, 4), `*`(`^`(cos(`*`(k, `*`(x))), 2), `*`(`^`(l, 2), `*`(eval(diff(diff(delta__2(x, z), z), z), {z = 0}))))), `-`(`*`(`/`(1, 2), `*`(`^`(A, 2), `*`(`^`(l, 2), `*`(`+`(`*`(`^`(A, 2), ..." align="center" border="0"></td>
+<td width='5%' align='center'>(17)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Again, rearranging and recognizing that </font><font color="#000000" size="3" face="Times New Roman"><em>d/dz</em></font><font color="#000000" size="3" face="Times New Roman"> is proportional to </font><font color="#000000" size="3" face="Times New Roman"><em>l</em></font><font color="#000000" size="3" face="Times New Roman">, we have</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_36.gif" width="244" height="39" alt="0 = `+`(`-`(`*`(`/`(1, 2), `*`(`^`(A, 3), `*`(`^`(l, 2), `*`(cos(`*`(k, `*`(x)))))))), `*`(`^`(A, 2), `*`(`^`(l, 2), `*`(delta__2(x, 0)))))" align="center" border="0"></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_37.gif" width="250" height="39" alt="0 = `+`(`-`(`*`(`/`(1, 2), `*`(`^`(A, 3), `*`(`^`(l, 2), `*`(cos(`*`(k, `*`(x)))))))), `*`(`^`(A, 2), `*`(`^`(l, 2), `*`(delta__2(x, 0)))))" align="center" border="0"></td>
+<td width='5%' align='center'>(18)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Hence, <img src="images/Longs_eq_assym_sol_38.gif" width="164" height="39" alt="delta__2(x, 0) := `+`(`*`(`/`(1, 2), `*`(A, `*`(cos(`*`(k, `*`(x)))))))" align="center" border="0"></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_39.gif" width="98" height="39" alt="`+`(`*`(`/`(1, 2), `*`(A, `*`(cos(`*`(k, `*`(x)))))))" align="center" border="0"></td>
+<td width='5%' align='center'>(19)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">And on appeal to Long's Model, we have</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_40.gif" width="194" height="39" alt="delta__2 := proc (x, z) options operator, arrow; `+`(`*`(`/`(1, 2), `*`(A, `*`(cos(`+`(`*`(k, `*`(x)), `*`(l, `*`(z)))))))) end proc" align="center" border="0"></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_41.gif" width="183" height="39" alt="proc (x, z) options operator, arrow; `+`(`*`(`/`(1, 2), `*`(A, `*`(cos(`+`(`*`(k, `*`(x)), `*`(l, `*`(z)))))))) end proc" align="center" border="0"></td>
+<td width='5%' align='center'>(20)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">All together now, our second order accurate solution to Long's Model reads as <img src="images/Longs_eq_assym_sol_42.gif" width="56" height="21" alt="delta(x, z)" align="center" border="0">=</font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_43.gif" width="428" height="39" alt="`+`(`*`(A, `*`(cos(`+`(`*`(k, `*`(x)), `*`(l, `*`(z)))))), `*`(`/`(1, 2), `*`(`^`(A, 2), `*`(l, `*`(sin(`+`(`*`(2, `*`(k, `*`(x))), `*`(l, `*`(z)))))))), `*`(`/`(1, 2), `*`(`^`(A, 3), `*`(`^`(l, 2), `..." align="center" border="0"></td>
+<td width='5%' align='center'>(21)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Now we must face the unfortunate truth that we've been implicitly evaluating at a z-level that depends on x. That is, δ(x,z) is evaluated at the posiotion of the displaced streamline, z, rather than at the position of the streamline far upstream, which I will call z0 (subscript 0 in math mode). More rigorously, we can define an analog of δ that is evaluated at z0:</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_44.gif" width="268" height="26" alt="`and`(delta(x, z) = delta(x, `+`(z__0, eta(x, z__0))), delta(x, `+`(z__0, eta(x, z__0))) = eta(x, z__0)); -1" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">As a first step toward the solution in (x,z0) coordinates, we expand η in powers of J, &nbsp;going again out to 2nd order accuracy::</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_45.gif" width="332" height="27" alt="eta := proc (x, z__0) options operator, arrow; `+`(eta__0(x, z__0), `*`(J, `*`(eta__1(x, z__0))), `*`(`^`(J, 2), `*`(eta__2(x, z__0)))) end proc" align="center" border="0"></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_46.gif" width="309" height="27" alt="proc (x, z__0) options operator, arrow; `+`(eta__0(x, z__0), `*`(J, `*`(eta__1(x, z__0))), `*`(`^`(J, 2), `*`(eta__2(x, z__0)))) end proc" align="center" border="0"></td>
+<td width='5%' align='center'>(22)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Now we can taylor expand δ around z0:</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_47.gif" width="608" height="43" alt="eta(x, z__0) = `+`(delta(x, z__0), `*`(eta(x, z__0), `*`(eval(diff(delta(x, z), z), z = z__0))), `*`(`^`(eta(x, z__0), 2), `*`(eval(diff(delta(x, z), z, z), z = z__0))))" align="center" border="0"></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_48.gif" width="768" height="30" alt="`+`(eta__0(x, z__0), `*`(A, `*`(l, `*`(eta__1(x, z__0)))), `*`(`^`(A, 2), `*`(`^`(l, 2), `*`(eta__2(x, z__0))))) = `+`(`*`(A, `*`(cos(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0)))))), `*`(`/`(1, 2), `*`(`^`(..." align="center" border="0"><br><img src="images/Longs_eq_assym_sol_49.gif" width="768" height="30" alt="`+`(eta__0(x, z__0), `*`(A, `*`(l, `*`(eta__1(x, z__0)))), `*`(`^`(A, 2), `*`(`^`(l, 2), `*`(eta__2(x, z__0))))) = `+`(`*`(A, `*`(cos(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0)))))), `*`(`/`(1, 2), `*`(`^`(..." align="center" border="0"><br><img src="images/Longs_eq_assym_sol_50.gif" width="768" height="30" alt="`+`(eta__0(x, z__0), `*`(A, `*`(l, `*`(eta__1(x, z__0)))), `*`(`^`(A, 2), `*`(`^`(l, 2), `*`(eta__2(x, z__0))))) = `+`(`*`(A, `*`(cos(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0)))))), `*`(`/`(1, 2), `*`(`^`(..." align="center" border="0"></td>
+<td width='5%' align='center'>(23)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">What a mess! Let's break this down in orders of J. The zeroth order solution for η comes quickly by neglecting all terms of order J or higher:</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_51.gif" width="152" height="26" alt="eta__0 := proc (x, z__0) options operator, arrow; delta__0(x, z__0) end proc" align="center" border="0"></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_52.gif" width="126" height="26" alt="proc (x, z__0) options operator, arrow; delta__0(x, z__0) end proc" align="center" border="0"></td>
+<td width='5%' align='center'>(24)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_53.gif" width="72" height="26" alt="eta__0(x, z__0)" align="center" border="0"></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_54.gif" width="116" height="23" alt="`*`(A, `*`(cos(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0))))))" align="center" border="0"></td>
+<td width='5%' align='center'>(25)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Now for the first order solution, expand η only to first order and plug that into the first order taylor expansion of δ around z0:</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_55.gif" width="246" height="26" alt="eta := proc (x, z__0) options operator, arrow; `+`(eta__0(x, z__0), `*`(J, `*`(eta__1(x, z__0)))) end proc" align="center" border="0"></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_56.gif" width="216" height="26" alt="proc (x, z__0) options operator, arrow; `+`(eta__0(x, z__0), `*`(J, `*`(eta__1(x, z__0)))) end proc" align="center" border="0"></td>
+<td width='5%' align='center'>(26)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_57.gif" width="474" height="38" alt="0 = collect(`+`(`-`(eta(x, z__0)), delta(x, z__0), `*`(eta(x, z__0), `*`(eval(diff(delta(x, z), z), z = z__0)))), l)" align="center" border="0"></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_58.gif" width="768" height="30" alt="0 = `+`(`-`(`*`(`/`(1, 2), `*`(`^`(A, 4), `*`(eta__1(x, z__0), `*`(sin(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0)))), `*`(`^`(l, 4))))))), `*`(`+`(`-`(`*`(`/`(1, 2), `*`(`^`(A, 4), `*`(cos(`+`(`*`(k, `*`(x)..." align="center" border="0"><br><img src="images/Longs_eq_assym_sol_59.gif" width="768" height="30" alt="0 = `+`(`-`(`*`(`/`(1, 2), `*`(`^`(A, 4), `*`(eta__1(x, z__0), `*`(sin(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0)))), `*`(`^`(l, 4))))))), `*`(`+`(`-`(`*`(`/`(1, 2), `*`(`^`(A, 4), `*`(cos(`+`(`*`(k, `*`(x)..." align="center" border="0"><br><img src="images/Longs_eq_assym_sol_60.gif" width="768" height="30" alt="0 = `+`(`-`(`*`(`/`(1, 2), `*`(`^`(A, 4), `*`(eta__1(x, z__0), `*`(sin(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0)))), `*`(`^`(l, 4))))))), `*`(`+`(`-`(`*`(`/`(1, 2), `*`(`^`(A, 4), `*`(cos(`+`(`*`(k, `*`(x)..." align="center" border="0"></td>
+<td width='5%' align='center'>(27)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Retaining only terms of 1st order in </font><font color="#000000" size="3" face="Times New Roman"><em>l</em></font><font color="#000000" size="3" face="Times New Roman">, this reads</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_61.gif" width="495" height="39" alt="`*`(A, `*`(l, `*`(eta__1(x, z__0)))) = `+`(`*`(`/`(1, 2), `*`(`^`(A, 2), `*`(l, `*`(sin(`+`(`*`(2, `*`(k, `*`(x))), `*`(l, `*`(z__0)))))))), `-`(`*`(`^`(A, 2), `*`(l, `*`(cos(`+`(`*`(k, `*`(x)), `*`(l..." align="center" border="0"></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_62.gif" width="488" height="39" alt="`*`(A, `*`(l, `*`(eta__1(x, z__0)))) = `+`(`*`(`/`(1, 2), `*`(`^`(A, 2), `*`(l, `*`(sin(`+`(`*`(2, `*`(k, `*`(x))), `*`(l, `*`(z__0)))))))), `-`(`*`(`^`(A, 2), `*`(l, `*`(cos(`+`(`*`(k, `*`(x)), `*`(l..." align="center" border="0"></td>
+<td width='5%' align='center'>(28)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Now again recall the trig identity</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_63.gif" width="211" height="18" alt="trigsubs(`*`(cos(`+`(x, z)), `*`(sin(`+`(x, z)))))" align="center" border="0"></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_64.gif" width="135" height="39" alt="[`+`(`*`(`/`(1, 2), `*`(sin(`+`(`*`(2, `*`(x)), `*`(2, `*`(z)))))))]" align="center" border="0"></td>
+<td width='5%' align='center'>(29)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">And we have</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_65.gif" width="408" height="39" alt="eta__1 := proc (x, z__0) options operator, arrow; `*`(A, `*`(`+`(`*`(`/`(1, 2), `*`(sin(`+`(`*`(2, `*`(k, `*`(x))), `*`(l, `*`(z__0)))))), `-`(`*`(`/`(1, 2), `*`(sin(`+`(`*`(2, `*`(k, `*`(x))), `*`(2,..." align="center" border="0"></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_66.gif" width="386" height="39" alt="proc (x, z__0) options operator, arrow; `*`(A, `*`(`+`(`*`(`/`(1, 2), `*`(sin(`+`(`*`(2, `*`(k, `*`(x))), `*`(l, `*`(z__0)))))), `-`(`*`(`/`(1, 2), `*`(sin(`+`(`*`(2, `*`(k, `*`(x))), `*`(2, `*`(l, `*..." align="center" border="0"></td>
+<td width='5%' align='center'>(30)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Now we are in a position to go for the 2nd order accurate solution without too much headache.</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_67.gif" width="332" height="27" alt="eta := proc (x, z__0) options operator, arrow; `+`(eta__0(x, z__0), `*`(J, `*`(eta__1(x, z__0))), `*`(`^`(J, 2), `*`(eta__2(x, z__0)))) end proc" align="center" border="0"></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_68.gif" width="309" height="27" alt="proc (x, z__0) options operator, arrow; `+`(eta__0(x, z__0), `*`(J, `*`(eta__1(x, z__0))), `*`(`^`(J, 2), `*`(eta__2(x, z__0)))) end proc" align="center" border="0"></td>
+<td width='5%' align='center'>(31)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_69.gif" width="720" height="43" alt="0 = collect(`+`(`-`(eta(x, z__0)), delta(x, z__0), `*`(eta(x, z__0), `*`(eval(diff(delta(x, z), z), z = z__0))), `*`(`^`(eta(x, z__0), 2), `*`(eval(diff(delta(x, z), z, z), z = z__0)))), l)" align="center" border="0"></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_70.gif" width="768" height="30" alt="0 = `+`(`-`(`*`(`/`(1, 2), `*`(`^`(A, 7), `*`(`^`(eta__2(x, z__0), 2), `*`(cos(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0)))), `*`(`^`(l, 8))))))), `*`(`+`(`-`(`*`(`^`(A, 7), `*`(`+`(`*`(`/`(1, 2), `*`(sin(`..." align="center" border="0"><br><img src="images/Longs_eq_assym_sol_71.gif" width="768" height="33" alt="0 = `+`(`-`(`*`(`/`(1, 2), `*`(`^`(A, 7), `*`(`^`(eta__2(x, z__0), 2), `*`(cos(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0)))), `*`(`^`(l, 8))))))), `*`(`+`(`-`(`*`(`^`(A, 7), `*`(`+`(`*`(`/`(1, 2), `*`(sin(`..." align="center" border="0"><br><img src="images/Longs_eq_assym_sol_72.gif" width="768" height="33" alt="0 = `+`(`-`(`*`(`/`(1, 2), `*`(`^`(A, 7), `*`(`^`(eta__2(x, z__0), 2), `*`(cos(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0)))), `*`(`^`(l, 8))))))), `*`(`+`(`-`(`*`(`^`(A, 7), `*`(`+`(`*`(`/`(1, 2), `*`(sin(`..." align="center" border="0"><br><img src="images/Longs_eq_assym_sol_73.gif" width="768" height="33" alt="0 = `+`(`-`(`*`(`/`(1, 2), `*`(`^`(A, 7), `*`(`^`(eta__2(x, z__0), 2), `*`(cos(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0)))), `*`(`^`(l, 8))))))), `*`(`+`(`-`(`*`(`^`(A, 7), `*`(`+`(`*`(`/`(1, 2), `*`(sin(`..." align="center" border="0"><br><img src="images/Longs_eq_assym_sol_74.gif" width="768" height="33" alt="0 = `+`(`-`(`*`(`/`(1, 2), `*`(`^`(A, 7), `*`(`^`(eta__2(x, z__0), 2), `*`(cos(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0)))), `*`(`^`(l, 8))))))), `*`(`+`(`-`(`*`(`^`(A, 7), `*`(`+`(`*`(`/`(1, 2), `*`(sin(`..." align="center" border="0"><br><img src="images/Longs_eq_assym_sol_75.gif" width="768" height="33" alt="0 = `+`(`-`(`*`(`/`(1, 2), `*`(`^`(A, 7), `*`(`^`(eta__2(x, z__0), 2), `*`(cos(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0)))), `*`(`^`(l, 8))))))), `*`(`+`(`-`(`*`(`^`(A, 7), `*`(`+`(`*`(`/`(1, 2), `*`(sin(`..." align="center" border="0"><br><img src="images/Longs_eq_assym_sol_76.gif" width="768" height="33" alt="0 = `+`(`-`(`*`(`/`(1, 2), `*`(`^`(A, 7), `*`(`^`(eta__2(x, z__0), 2), `*`(cos(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0)))), `*`(`^`(l, 8))))))), `*`(`+`(`-`(`*`(`^`(A, 7), `*`(`+`(`*`(`/`(1, 2), `*`(sin(`..." align="center" border="0"><br><img src="images/Longs_eq_assym_sol_77.gif" width="768" height="30" alt="0 = `+`(`-`(`*`(`/`(1, 2), `*`(`^`(A, 7), `*`(`^`(eta__2(x, z__0), 2), `*`(cos(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0)))), `*`(`^`(l, 8))))))), `*`(`+`(`-`(`*`(`^`(A, 7), `*`(`+`(`*`(`/`(1, 2), `*`(sin(`..." align="center" border="0"><br><img src="images/Longs_eq_assym_sol_78.gif" width="768" height="30" alt="0 = `+`(`-`(`*`(`/`(1, 2), `*`(`^`(A, 7), `*`(`^`(eta__2(x, z__0), 2), `*`(cos(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0)))), `*`(`^`(l, 8))))))), `*`(`+`(`-`(`*`(`^`(A, 7), `*`(`+`(`*`(`/`(1, 2), `*`(sin(`..." align="center" border="0"><br><img src="images/Longs_eq_assym_sol_79.gif" width="768" height="30" alt="0 = `+`(`-`(`*`(`/`(1, 2), `*`(`^`(A, 7), `*`(`^`(eta__2(x, z__0), 2), `*`(cos(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0)))), `*`(`^`(l, 8))))))), `*`(`+`(`-`(`*`(`^`(A, 7), `*`(`+`(`*`(`/`(1, 2), `*`(sin(`..." align="center" border="0"><br><img src="images/Longs_eq_assym_sol_80.gif" width="768" height="30" alt="0 = `+`(`-`(`*`(`/`(1, 2), `*`(`^`(A, 7), `*`(`^`(eta__2(x, z__0), 2), `*`(cos(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0)))), `*`(`^`(l, 8))))))), `*`(`+`(`-`(`*`(`^`(A, 7), `*`(`+`(`*`(`/`(1, 2), `*`(sin(`..." align="center" border="0"></td>
+<td width='5%' align='center'>(32)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Not too much headache?! Well... consider only those terms of 2nd order, and this is more manageable. First, though, let's take a look at those 1st order in </font><font color="#000000" size="3" face="Times New Roman"><em>l </em></font><font color="#000000" size="3" face="Times New Roman">terms:</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_81.gif" width="768" height="30" alt="simplify(`*`(`+`(`-`(`*`(A, `*`(`+`(`*`(`/`(1, 2), `*`(A, `*`(sin(`+`(`*`(2, `*`(k, `*`(x))), `*`(l, `*`(z__0))))))), `-`(`*`(`/`(1, 2), `*`(A, `*`(sin(`+`(`*`(2, `*`(k, `*`(x))), `*`(2, `*`(l, `*`(z_..." align="center" border="0"><br><img src="images/Longs_eq_assym_sol_82.gif" width="768" height="30" alt="simplify(`*`(`+`(`-`(`*`(A, `*`(`+`(`*`(`/`(1, 2), `*`(A, `*`(sin(`+`(`*`(2, `*`(k, `*`(x))), `*`(l, `*`(z__0))))))), `-`(`*`(`/`(1, 2), `*`(A, `*`(sin(`+`(`*`(2, `*`(k, `*`(x))), `*`(2, `*`(l, `*`(z_..." align="center" border="0"></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_83.gif" width="18" height="18" alt="0" align="center" border="0"></td>
+<td width='5%' align='center'>(33)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Maple could not see it before... but they equal zero. There is no mistake so far. Phew!</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Okay, now for the 2nd order in </font><font color="#000000" size="3" face="Times New Roman"><em>l</em></font><font color="#000000" size="3" face="Times New Roman"> terms</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_84.gif" width="768" height="30" alt="isolate(0 = `*`(`+`(`-`(`*`(`^`(A, 2), `*`(eta__2(x, z__0)))), `*`(`/`(1, 2), `*`(`^`(A, 3), `*`(cos(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0))))))), `*`(`/`(1, 2), `*`(`^`(A, 3), `*`(cos(`+`(`*`(k, `*`(x)..." align="center" border="0"><br><img src="images/Longs_eq_assym_sol_85.gif" width="768" height="30" alt="isolate(0 = `*`(`+`(`-`(`*`(`^`(A, 2), `*`(eta__2(x, z__0)))), `*`(`/`(1, 2), `*`(`^`(A, 3), `*`(cos(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0))))))), `*`(`/`(1, 2), `*`(`^`(A, 3), `*`(cos(`+`(`*`(k, `*`(x)..." align="center" border="0"></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_86.gif" width="768" height="33" alt="eta__2(x, z__0) = `+`(`-`(`/`(`*`(`+`(`-`(`*`(`/`(1, 2), `*`(`^`(A, 3), `*`(cos(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0)))))))), `-`(`*`(`/`(1, 2), `*`(`^`(A, 3), `*`(cos(`+`(`*`(k, `*`(x)), `*`(l, `*`(z_..." align="center" border="0"><br><img src="images/Longs_eq_assym_sol_87.gif" width="768" height="30" alt="eta__2(x, z__0) = `+`(`-`(`/`(`*`(`+`(`-`(`*`(`/`(1, 2), `*`(`^`(A, 3), `*`(cos(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0)))))))), `-`(`*`(`/`(1, 2), `*`(`^`(A, 3), `*`(cos(`+`(`*`(k, `*`(x)), `*`(l, `*`(z_..." align="center" border="0"></td>
+<td width='5%' align='center'>(34)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Cleaning this up a little, we have</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_88.gif" width="768" height="30" alt="eta__2 := proc (x, z__0) options operator, arrow; `*`(A, `*`(`+`(`*`(`/`(1, 2), `*`(cos(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0)))))), `*`(`/`(1, 2), `*`(cos(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0)))), `*`(c..." align="center" border="0"><br><img src="images/Longs_eq_assym_sol_89.gif" width="768" height="30" alt="eta__2 := proc (x, z__0) options operator, arrow; `*`(A, `*`(`+`(`*`(`/`(1, 2), `*`(cos(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0)))))), `*`(`/`(1, 2), `*`(cos(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0)))), `*`(c..." align="center" border="0"></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_90.gif" width="768" height="30" alt="proc (x, z__0) options operator, arrow; `*`(A, `*`(`+`(`*`(`/`(1, 2), `*`(cos(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0)))))), `*`(`/`(1, 2), `*`(cos(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0)))), `*`(cos(`+`(`*`..." align="center" border="0"><br><img src="images/Longs_eq_assym_sol_91.gif" width="768" height="30" alt="proc (x, z__0) options operator, arrow; `*`(A, `*`(`+`(`*`(`/`(1, 2), `*`(cos(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0)))))), `*`(`/`(1, 2), `*`(cos(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0)))), `*`(cos(`+`(`*`..." align="center" border="0"></td>
+<td width='5%' align='center'>(35)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">And thus all together, &nbsp;plugging our solutions into<img src="images/Longs_eq_assym_sol_92.gif" width="382" height="27" alt="eta := proc (x, z__0) options operator, arrow; `+`(eta__0(x, z__0), `*`(J, `*`(eta__1(x, z__0))), `*`(`^`(J, 2), `*`(eta__2(x, z__0))), `*`(A, `*`(`^`(J, 3)))) end proc" align="center" border="0"></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_93.gif" width="355" height="27" alt="proc (x, z__0) options operator, arrow; `+`(eta__0(x, z__0), `*`(J, `*`(eta__1(x, z__0))), `*`(`^`(J, 2), `*`(eta__2(x, z__0))), `*`(A, `*`(`^`(J, 3)))) end proc" align="center" border="0"></td>
+<td width='5%' align='center'>(36)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">η looks like: <img src="images/Longs_eq_assym_sol_94.gif" width="62" height="26" alt="eta(x, z__0)" align="center" border="0">=</font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_95.gif" width="768" height="30" alt="`+`(`*`(A, `*`(cos(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0)))))), `*`(`^`(A, 2), `*`(l, `*`(`+`(`*`(`/`(1, 2), `*`(sin(`+`(`*`(2, `*`(k, `*`(x))), `*`(l, `*`(z__0)))))), `-`(`*`(`/`(1, 2), `*`(sin(`+`(`*`..." align="center" border="0"><br><img src="images/Longs_eq_assym_sol_96.gif" width="768" height="30" alt="`+`(`*`(A, `*`(cos(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0)))))), `*`(`^`(A, 2), `*`(l, `*`(`+`(`*`(`/`(1, 2), `*`(sin(`+`(`*`(2, `*`(k, `*`(x))), `*`(l, `*`(z__0)))))), `-`(`*`(`/`(1, 2), `*`(sin(`+`(`*`..." align="center" border="0"></td>
+<td width='5%' align='center'>(37)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Now, to relate η to other fields, we'll create the stream function</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_97.gif" width="217" height="26" alt="psi := proc (x, z__0) options operator, arrow; `*`(U, `*`(`+`(`-`(z__0), eta(x, z__0)))) end proc" align="center" border="0"></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_98.gif" width="196" height="26" alt="proc (x, z__0) options operator, arrow; `*`(U, `*`(`+`(`-`(z__0), eta(x, z__0)))) end proc" align="center" border="0"></td>
+<td width='5%' align='center'>(38)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">And the horizontal velocity</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_99.gif" width="183" height="44" alt="u := proc (x, z__0) options operator, arrow; `+`(`-`(diff(psi(x, z__0), z__0))) end proc" align="center" border="0"></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_100.gif" width="187" height="43" alt="proc (x, z__0) options operator, arrow; `+`(`-`(diff(psi(x, z__0), z__0))) end proc" align="center" border="0"></td>
+<td width='5%' align='center'>(39)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Now assign the expression arrived at by typing u(x,z)) &nbsp;to u(x,z0) so that we can ask for u(x,0) without getting the error of trying to evalueate a derivative of psi in z0 when it is no longer a function of z0...</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_101.gif" width="768" height="30" alt="u := proc (x, z__0) options operator, arrow; `+`(`-`(`*`(U, `*`(`+`(`-`(1), `-`(`*`(A, `*`(l, `*`(sin(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0)))))))), `*`(`^`(A, 2), `*`(l, `*`(`+`(`*`(`/`(1, 2), `*`(l, `..." align="center" border="0"><br><img src="images/Longs_eq_assym_sol_102.gif" width="768" height="30" alt="u := proc (x, z__0) options operator, arrow; `+`(`-`(`*`(U, `*`(`+`(`-`(1), `-`(`*`(A, `*`(l, `*`(sin(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0)))))))), `*`(`^`(A, 2), `*`(l, `*`(`+`(`*`(`/`(1, 2), `*`(l, `..." align="center" border="0"><br><img src="images/Longs_eq_assym_sol_103.gif" width="768" height="30" alt="u := proc (x, z__0) options operator, arrow; `+`(`-`(`*`(U, `*`(`+`(`-`(1), `-`(`*`(A, `*`(l, `*`(sin(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0)))))))), `*`(`^`(A, 2), `*`(l, `*`(`+`(`*`(`/`(1, 2), `*`(l, `..." align="center" border="0"></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_104.gif" width="768" height="30" alt="proc (x, z__0) options operator, arrow; `+`(`-`(`*`(U, `*`(`+`(`-`(1), `-`(`*`(A, `*`(l, `*`(sin(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0)))))))), `*`(`^`(A, 2), `*`(l, `*`(`+`(`*`(`/`(1, 2), `*`(l, `*`(co..." align="center" border="0"><br><img src="images/Longs_eq_assym_sol_105.gif" width="768" height="30" alt="proc (x, z__0) options operator, arrow; `+`(`-`(`*`(U, `*`(`+`(`-`(1), `-`(`*`(A, `*`(l, `*`(sin(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0)))))))), `*`(`^`(A, 2), `*`(l, `*`(`+`(`*`(`/`(1, 2), `*`(l, `*`(co..." align="center" border="0"><br><img src="images/Longs_eq_assym_sol_106.gif" width="768" height="30" alt="proc (x, z__0) options operator, arrow; `+`(`-`(`*`(U, `*`(`+`(`-`(1), `-`(`*`(A, `*`(l, `*`(sin(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0)))))))), `*`(`^`(A, 2), `*`(l, `*`(`+`(`*`(`/`(1, 2), `*`(l, `*`(co..." align="center" border="0"></td>
+<td width='5%' align='center'>(40)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">And the vertical velocity</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_107.gif" width="176" height="39" alt="w := proc (x, z__0) options operator, arrow; diff(psi(x, z__0), x) end proc" align="center" border="0"></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_108.gif" width="152" height="38" alt="proc (x, z__0) options operator, arrow; diff(psi(x, z__0), x) end proc" align="center" border="0"></td>
+<td width='5%' align='center'>(41)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_109.gif" width="768" height="30" alt="w := proc (x, z__0) options operator, arrow; `*`(U, `*`(`+`(`-`(`*`(A, `*`(k, `*`(sin(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0)))))))), `*`(`^`(A, 2), `*`(l, `*`(`+`(`*`(k, `*`(cos(`+`(`*`(2, `*`(k, `*`(x)..." align="center" border="0"><br><img src="images/Longs_eq_assym_sol_110.gif" width="768" height="30" alt="w := proc (x, z__0) options operator, arrow; `*`(U, `*`(`+`(`-`(`*`(A, `*`(k, `*`(sin(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0)))))))), `*`(`^`(A, 2), `*`(l, `*`(`+`(`*`(k, `*`(cos(`+`(`*`(2, `*`(k, `*`(x)..." align="center" border="0"><br><img src="images/Longs_eq_assym_sol_111.gif" width="768" height="30" alt="w := proc (x, z__0) options operator, arrow; `*`(U, `*`(`+`(`-`(`*`(A, `*`(k, `*`(sin(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0)))))))), `*`(`^`(A, 2), `*`(l, `*`(`+`(`*`(k, `*`(cos(`+`(`*`(2, `*`(k, `*`(x)..." align="center" border="0"></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_112.gif" width="768" height="30" alt="proc (x, z__0) options operator, arrow; `*`(U, `*`(`+`(`-`(`*`(A, `*`(k, `*`(sin(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0)))))))), `*`(`^`(A, 2), `*`(l, `*`(`+`(`*`(k, `*`(cos(`+`(`*`(2, `*`(k, `*`(x))), `..." align="center" border="0"><br><img src="images/Longs_eq_assym_sol_113.gif" width="768" height="30" alt="proc (x, z__0) options operator, arrow; `*`(U, `*`(`+`(`-`(`*`(A, `*`(k, `*`(sin(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0)))))))), `*`(`^`(A, 2), `*`(l, `*`(`+`(`*`(k, `*`(cos(`+`(`*`(2, `*`(k, `*`(x))), `..." align="center" border="0"><br><img src="images/Longs_eq_assym_sol_114.gif" width="768" height="30" alt="proc (x, z__0) options operator, arrow; `*`(U, `*`(`+`(`-`(`*`(A, `*`(k, `*`(sin(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0)))))))), `*`(`^`(A, 2), `*`(l, `*`(`+`(`*`(k, `*`(cos(`+`(`*`(2, `*`(k, `*`(x))), `..." align="center" border="0"></td>
+<td width='5%' align='center'>(42)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">And using Long's hydrostatic equation, the u momentum equation, and the expressions of u and w in terms of η, we can derive the pressure as</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_115.gif" width="303" height="47" alt="p := proc (x, z__0) options operator, arrow; `+`(`-`(`*`(`/`(1, 2), `*`(rho__0, `*`(`+`(`*`(`^`(u(x, z__0), 2)), `*`(`^`(N, 2), `*`(`^`(eta(x, z__0), 2))))))))) end proc" align="center" border="0"></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_116.gif" width="295" height="39" alt="proc (x, z__0) options operator, arrow; `+`(`-`(`*`(`/`(1, 2), `*`(rho__0, `*`(`+`(`*`(`^`(u(x, z__0), 2)), `*`(`^`(N, 2), `*`(`^`(eta(x, z__0), 2))))))))) end proc" align="center" border="0"></td>
+<td width='5%' align='center'>(43)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_117.gif" width="133" height="23" alt="collect(p(x, z__0), l)" align="center" border="0"></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_118.gif" width="768" height="33" alt="`+`(`-`(`*`(`/`(1, 2), `*`(rho__0, `*`(`+`(`*`(`^`(U, 2), `*`(`^`(A, 6), `*`(`^`(`+`(`-`(`*`(`/`(1, 2), `*`(sin(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0))))))), `-`(`*`(sin(`+`(`*`(k, `*`(x)), `*`(l, `*`(z..." align="center" border="0"><br><img src="images/Longs_eq_assym_sol_119.gif" width="768" height="33" alt="`+`(`-`(`*`(`/`(1, 2), `*`(rho__0, `*`(`+`(`*`(`^`(U, 2), `*`(`^`(A, 6), `*`(`^`(`+`(`-`(`*`(`/`(1, 2), `*`(sin(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0))))))), `-`(`*`(sin(`+`(`*`(k, `*`(x)), `*`(l, `*`(z..." align="center" border="0"><br><img src="images/Longs_eq_assym_sol_120.gif" width="768" height="30" alt="`+`(`-`(`*`(`/`(1, 2), `*`(rho__0, `*`(`+`(`*`(`^`(U, 2), `*`(`^`(A, 6), `*`(`^`(`+`(`-`(`*`(`/`(1, 2), `*`(sin(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0))))))), `-`(`*`(sin(`+`(`*`(k, `*`(x)), `*`(l, `*`(z..." align="center" border="0"><br><img src="images/Longs_eq_assym_sol_121.gif" width="768" height="30" alt="`+`(`-`(`*`(`/`(1, 2), `*`(rho__0, `*`(`+`(`*`(`^`(U, 2), `*`(`^`(A, 6), `*`(`^`(`+`(`-`(`*`(`/`(1, 2), `*`(sin(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0))))))), `-`(`*`(sin(`+`(`*`(k, `*`(x)), `*`(l, `*`(z..." align="center" border="0"><br><img src="images/Longs_eq_assym_sol_122.gif" width="768" height="33" alt="`+`(`-`(`*`(`/`(1, 2), `*`(rho__0, `*`(`+`(`*`(`^`(U, 2), `*`(`^`(A, 6), `*`(`^`(`+`(`-`(`*`(`/`(1, 2), `*`(sin(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0))))))), `-`(`*`(sin(`+`(`*`(k, `*`(x)), `*`(l, `*`(z..." align="center" border="0"><br><img src="images/Longs_eq_assym_sol_123.gif" width="768" height="33" alt="`+`(`-`(`*`(`/`(1, 2), `*`(rho__0, `*`(`+`(`*`(`^`(U, 2), `*`(`^`(A, 6), `*`(`^`(`+`(`-`(`*`(`/`(1, 2), `*`(sin(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0))))))), `-`(`*`(sin(`+`(`*`(k, `*`(x)), `*`(l, `*`(z..." align="center" border="0"><br><img src="images/Longs_eq_assym_sol_124.gif" width="768" height="33" alt="`+`(`-`(`*`(`/`(1, 2), `*`(rho__0, `*`(`+`(`*`(`^`(U, 2), `*`(`^`(A, 6), `*`(`^`(`+`(`-`(`*`(`/`(1, 2), `*`(sin(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0))))))), `-`(`*`(sin(`+`(`*`(k, `*`(x)), `*`(l, `*`(z..." align="center" border="0"><br><img src="images/Longs_eq_assym_sol_125.gif" width="768" height="33" alt="`+`(`-`(`*`(`/`(1, 2), `*`(rho__0, `*`(`+`(`*`(`^`(U, 2), `*`(`^`(A, 6), `*`(`^`(`+`(`-`(`*`(`/`(1, 2), `*`(sin(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0))))))), `-`(`*`(sin(`+`(`*`(k, `*`(x)), `*`(l, `*`(z..." align="center" border="0"><br><img src="images/Longs_eq_assym_sol_126.gif" width="768" height="30" alt="`+`(`-`(`*`(`/`(1, 2), `*`(rho__0, `*`(`+`(`*`(`^`(U, 2), `*`(`^`(A, 6), `*`(`^`(`+`(`-`(`*`(`/`(1, 2), `*`(sin(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0))))))), `-`(`*`(sin(`+`(`*`(k, `*`(x)), `*`(l, `*`(z..." align="center" border="0"><br><img src="images/Longs_eq_assym_sol_127.gif" width="768" height="30" alt="`+`(`-`(`*`(`/`(1, 2), `*`(rho__0, `*`(`+`(`*`(`^`(U, 2), `*`(`^`(A, 6), `*`(`^`(`+`(`-`(`*`(`/`(1, 2), `*`(sin(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0))))))), `-`(`*`(sin(`+`(`*`(k, `*`(x)), `*`(l, `*`(z..." align="center" border="0"><br><img src="images/Longs_eq_assym_sol_128.gif" width="768" height="30" alt="`+`(`-`(`*`(`/`(1, 2), `*`(rho__0, `*`(`+`(`*`(`^`(U, 2), `*`(`^`(A, 6), `*`(`^`(`+`(`-`(`*`(`/`(1, 2), `*`(sin(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0))))))), `-`(`*`(sin(`+`(`*`(k, `*`(x)), `*`(l, `*`(z..." align="center" border="0"><br><img src="images/Longs_eq_assym_sol_129.gif" width="768" height="33" alt="`+`(`-`(`*`(`/`(1, 2), `*`(rho__0, `*`(`+`(`*`(`^`(U, 2), `*`(`^`(A, 6), `*`(`^`(`+`(`-`(`*`(`/`(1, 2), `*`(sin(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0))))))), `-`(`*`(sin(`+`(`*`(k, `*`(x)), `*`(l, `*`(z..." align="center" border="0"><br><img src="images/Longs_eq_assym_sol_130.gif" width="768" height="33" alt="`+`(`-`(`*`(`/`(1, 2), `*`(rho__0, `*`(`+`(`*`(`^`(U, 2), `*`(`^`(A, 6), `*`(`^`(`+`(`-`(`*`(`/`(1, 2), `*`(sin(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0))))))), `-`(`*`(sin(`+`(`*`(k, `*`(x)), `*`(l, `*`(z..." align="center" border="0"><br><img src="images/Longs_eq_assym_sol_131.gif" width="768" height="33" alt="`+`(`-`(`*`(`/`(1, 2), `*`(rho__0, `*`(`+`(`*`(`^`(U, 2), `*`(`^`(A, 6), `*`(`^`(`+`(`-`(`*`(`/`(1, 2), `*`(sin(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0))))))), `-`(`*`(sin(`+`(`*`(k, `*`(x)), `*`(l, `*`(z..." align="center" border="0"><br><img src="images/Longs_eq_assym_sol_132.gif" width="768" height="30" alt="`+`(`-`(`*`(`/`(1, 2), `*`(rho__0, `*`(`+`(`*`(`^`(U, 2), `*`(`^`(A, 6), `*`(`^`(`+`(`-`(`*`(`/`(1, 2), `*`(sin(`+`(`*`(k, `*`(x)), `*`(l, `*`(z__0))))))), `-`(`*`(sin(`+`(`*`(k, `*`(x)), `*`(l, `*`(z..." align="center" border="0"></td>
+<td width='5%' align='center'>(44)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_133.gif" width="56" height="18" alt="p(x, 0)" align="center" border="0"></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_134.gif" width="768" height="33" alt="`+`(`-`(`*`(`/`(1, 2), `*`(rho__0, `*`(`+`(`*`(`^`(U, 2), `*`(`^`(`+`(`-`(1), `-`(`*`(A, `*`(l, `*`(sin(`*`(k, `*`(x))))))), `-`(`*`(`/`(1, 2), `*`(`^`(A, 2), `*`(`^`(l, 2), `*`(cos(`+`(`*`(2, `*`(k, ..." align="center" border="0"><br><img src="images/Longs_eq_assym_sol_135.gif" width="768" height="33" alt="`+`(`-`(`*`(`/`(1, 2), `*`(rho__0, `*`(`+`(`*`(`^`(U, 2), `*`(`^`(`+`(`-`(1), `-`(`*`(A, `*`(l, `*`(sin(`*`(k, `*`(x))))))), `-`(`*`(`/`(1, 2), `*`(`^`(A, 2), `*`(`^`(l, 2), `*`(cos(`+`(`*`(2, `*`(k, ..." align="center" border="0"></td>
+<td width='5%' align='center'>(45)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Now that we have pressure, let's find the form drag on the topography (this is the negative of the forcing by the topography on the flow). We will integrate over one wavelength. Thus this is the formdrag per unit spanwise per wavelength (force per length). </font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_136.gif" width="217" height="72" alt="Fd := int(`*`(p(x, 0), `*`(diff(h(x), x))), x = 0 .. `+`(`/`(`*`(2, `*`(Pi)), `*`(k))))" align="center" border="0"></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_137.gif" width="329" height="39" alt="`+`(`-`(`*`(`/`(1, 8), `*`(`^`(A, 6), `*`(Pi, `*`(`^`(U, 2), `*`(`^`(l, 5), `*`(rho__0))))))), `-`(`*`(`/`(1, 4), `*`(`^`(A, 4), `*`(Pi, `*`(`^`(U, 2), `*`(`^`(l, 3), `*`(rho__0))))))), `*`(`^`(A, 2),..." align="center" border="0"></td>
+<td width='5%' align='center'>(46)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Reassign J so that I can swap it in for A*l: <img src="images/Longs_eq_assym_sol_138.gif" width="52" height="18" alt="J := 'J'" align="center" border="0"></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_139.gif" width="18" height="18" alt="J" align="center" border="0"></td>
+<td width='5%' align='center'>(47)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_140.gif" width="160" height="18" alt="simplify(Fd, {`*`(A, `*`(l)) = J})" align="center" border="0"></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_141.gif" width="218" height="39" alt="`+`(`-`(`*`(`/`(1, 8), `*`(Pi, `*`(`^`(U, 2), `*`(rho__0, `*`(A, `*`(J, `*`(`+`(`*`(`^`(J, 4)), `*`(2, `*`(`^`(J, 2))), `-`(8)))))))))))" align="center" border="0"></td>
+<td width='5%' align='center'>(48)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Note that the higher order terms </font><font color="#000000" size="3" face="Times New Roman"><em>reduce</em></font><font color="#000000" size="3" face="Times New Roman"> the form drag! Admittedly, the 5th order term might not be worth much, since our expansion only went out to 2nd order, and thus the accuracy in a derivative quantity such as pressure is only out to 3rd order.</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Now let's go for energy flux:</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_142.gif" width="199" height="23" alt="E := proc (x, z__0) options operator, arrow; `*`(p(x, z__0), `*`(w(x, z__0))) end proc" align="center" border="0"></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_143.gif" width="179" height="23" alt="proc (x, z__0) options operator, arrow; `*`(p(x, z__0), `*`(w(x, z__0))) end proc" align="center" border="0"></td>
+<td width='5%' align='center'>(49)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_144.gif" width="346" height="23" alt="collect(simplify(simplify(E(x, z__0)), {`*`(A, `*`(l)) = J}), l); -1" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">(this is an enormous polynomial... not worth displaying)</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">And, just as we did with form drag, let's find the flux of energy away from the bottom boundary per unit spanwise per wavelength. Here is at all levels in z0. Note that it is not constant in z0!</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_145.gif" width="182" height="65" alt="E__0 := proc (z__0) options operator, arrow; int(E(x, z__0), x = 0 .. `+`(`/`(`*`(2, `*`(Pi)), `*`(k)))) end proc" align="center" border="0"></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_146.gif" width="139" height="65" alt="proc (z__0) options operator, arrow; int(E(x, z__0), x = 0 .. `+`(`/`(`*`(2, `*`(Pi)), `*`(k)))) end proc" align="center" border="0"></td>
+<td width='5%' align='center'>(50)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_147.gif" width="329" height="23" alt="collect(simplify(simplify(E__0(z__0)), {`*`(A, `*`(l)) = J}), J)" align="center" border="0"></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_148.gif" width="558" height="39" alt="`+`(`-`(`*`(`/`(1, 8), `*`(Pi, `*`(`^`(U, 3), `*`(rho__0, `*`(A, `*`(`+`(`*`(4, `*`(cos(`*`(l, `*`(z__0))))), `-`(3)), `*`(`^`(J, 5))))))))), `-`(`*`(`/`(1, 8), `*`(Pi, `*`(`^`(U, 3), `*`(rho__0, `*`(..." align="center" border="0"></td>
+<td width='5%' align='center'>(51)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">And here is the enerfy flux at z0=0:</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_149.gif" width="105" height="23" alt="E__floor := E__0(0)" align="center" border="0"></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_150.gif" width="329" height="39" alt="`+`(`-`(`*`(`/`(1, 8), `*`(rho__0, `*`(`^`(U, 3), `*`(`^`(A, 6), `*`(Pi, `*`(`^`(l, 5)))))))), `-`(`*`(`/`(1, 4), `*`(rho__0, `*`(`^`(U, 3), `*`(`^`(A, 4), `*`(Pi, `*`(`^`(l, 3)))))))), `*`(rho__0, `*..." align="center" border="0"></td>
+<td width='5%' align='center'>(52)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_151.gif" width="177" height="23" alt="simplify(E__floor, {`*`(A, `*`(l)) = J})" align="center" border="0"></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Longs_eq_assym_sol_152.gif" width="218" height="39" alt="`+`(`-`(`*`(`/`(1, 8), `*`(Pi, `*`(`^`(U, 3), `*`(rho__0, `*`(A, `*`(J, `*`(`+`(`*`(`^`(J, 4)), `*`(2, `*`(`^`(J, 2))), `-`(8)))))))))))" align="center" border="0"></td>
+<td width='5%' align='center'>(53)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Note first that this is the form drag multiplied by U, jsut as in linear theory. Furthermore, note that just as with the form drag, the higher order terms reduce the energy flux. This might begin to explain the fall off in energy flux what we saw in the SUNTANS runs, even in the small J cases. That would be cool.</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">However, in SUNTANS we saw a convex curvature to the decay with J, while this describes a concave curvature.</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Still to do: stability! Find where d/dz0(η)=1 and where Ri&lt;1/4. To do that, I will need to find an N(x,z0).</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+</body>
+</html>
