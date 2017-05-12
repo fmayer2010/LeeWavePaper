@@ -181,13 +181,56 @@
 	
 	This does not, however, indicate that the height of the topography is irrelevant to the potential energy of the flow, only that it plays a higher order role in the kinetic energy. Holding $\delta=U/N$ constant, the scaling shows that $u_0 = J U$, implying that the perturbation velocity above the sill increases in step with increasing $J$, and thus with increasing $h_0$. However, the gravitational force resulting from the perturbation is given by $\sqrt{g'\delta} = J^{1/2} U$, which grows with half the power of $h_0$ as $u_0$. This is because $h_0$ can only enter into the first term of the potential energy side of the Froude number, $g'$. 
 	
-	Conceptually, we can picture a column of water headed for an isolated hill. As it approaches the hill, it enters the wave field, and some elements are lifted in preparation for a race across the crest. The height of this lift must be enough to overtop the hill, and scales with $h_0$. Then buoyancy acts on these lifted parcels, translating the wave's potential energy into kinetic energy. This is the source of the perturbation velocity over the hill, as indicated by the scaling $u_0=JU=Nh_0$.  As the column reaches the crest of the hill, its elements are all $h_0$ higher than they were, thus the density perturbation, and the resulting reduced gravity to work against for potential energy, also scales with $h_0$. We see this in the scaling $g'=g (R/\rho_0)=JUN=U^2h_0$. However, the length scale of this work against gravity is the wavelength, $\delta$, which is oblivious to $h_0$. Hence the scaling $\sqrt{g'\delta} = J^{1/2} U = \sqrt{Nh_0U}$. 
+	Conceptually, we can picture a column of water headed for an isolated hill. As it approaches the hill, it enters the wave field, and some elements are lifted in preparation for a race across the crest. The height of this lift must be enough to overtop the hill, and scales with $h_0$. Then buoyancy acts on these lifted parcels, translating the wave's potential energy into kinetic energy. This is the source of the perturbation velocity over the hill, as indicated by the scaling $u_0=JU=Nh_0$.  As the column reaches the crest of the hill, its elements are all $h_0$ higher than they were, thus the density perturbation, and the resulting reduced gravity to work against for potential energy, also scales with $h_0$. We see this in the scaling $g'=g (R/\rho_0)=JUN=N^2h_0$. However, the length scale of this work against gravity is the wavelength, $\delta$, which is oblivious to $h_0$. Hence the scaling $\sqrt{g'\delta} = J^{1/2} U = \sqrt{Nh_0U}$. 
 	
 	This identification of $J$ as the internal froude number squared appears to have gone without notice in the 65 years of studying Long's model. However, an inquiry into the upper limit of this relationship recently emerged from consideration of blocked flow past a half cylinder \citep{Winters2012}. In the blocked regime, that is, for flow in which $J>1$, the lowest fluid elements upstream of the obstacle lack sufficient kinetic energy to overtop the obstacle, and thus form a pool of stagnant fluid at the obstacle's base \citep{Baines1995}. As a result, the obstacle takes on the apparent height to the unblocked flow of U/N, that is, exactly the height of the flow's kinetic hill-climbing capacity, giving $J_{unblocked}=1$. In this case, Winter's and Armi show that the internal Froude number above the hill is exactly 1, and in analogy to hydraulic control of an unstratified river, the flow exhibits a transition from subcritical flow upstream to a supercritical jet downstream followed by a dissipative hydraulic jump. In other words, the relation between $J$ and $Fr_{\delta}$ holds only up to $J=Fr_{\delta}^2$=1. Above this limit, $Fr_{\delta}^2$=1, and $J$ informs the depth of the stagnant layer as well as the thickness and speed of the accelerated jet resulting from hydraulic control \citep{Winters2012}.
 	
 	That $J$ as a Froude number only holds up until the critical limit $J=1$ has perhaps prevented its general interpretation as a Froude number. Nonetheless, in the subcritical regime, $J^{1/2}=(Nh_0/U)^{1/2}=u_0/\sqrt{g'\delta}$ carries the true meaning of a Froude number, relating the speed with which the competing processes of advective non-linearities and gravity waves respond to the introduction of bathymetry into the flow. When $J$ is small, waves accommodate the disturbance adiabatically, and carry it away from the site of generation, just as in an unstratified river flowing over a sub-critical sill. As $J$ approaches 1, the two processes come into balance, and the volume flux above the hill approaches its maximum potential. 
 	
 	The unique element of this system is that the volume flux never backs off from this maximum with $J>1$. That is, so long as the height of the hill is still significantly shorter than the depth of the fluid (so that the assumption of infinite depth remains valid), the flow will always adjust such that the apparent height is not greater than the flux maximizing $\delta=U/N$. In this sense, the upstream characteristics of the flow present the system with a wave making capacity, and it is up top the hill to squeeze the wave into existence. But there is only so much juice in the fruit. 
+	
+\section{Appendix: Rotation}
+Including rotation in the nondimensional equations requires only slight modification. Because rotational effects necessarily involve a span wise direction, we must now include an equation for the span wise momentum. 
+
+We begin by aligning the $x$-direction with lines of latitude, and posit that the background currents are in geostrophic balance
+\begin{eqnarray*}
+	0 &=& -\D{P_G}{x} + fV \,,\\
+	0 &=& -\D{P_G}{y} - fU \,,\\
+\end{eqnarray*}
+where $P_G$ is a geostrophic pressure field that is decoupled from the perturbation pressure due the lee wave. 
+
+To keep the system as simple as possible, we further assume: it is in steady state; the bathymytery varies only in the $x$-direction; and rotation has a constant rate $f=\Omega sin(\bar{\phi})$, where $\Omega$ is the earth's rate of rotation, and $\bar{\phi}$ is the average lattitude of the domain. The assumption of steady state filters out inertial oscillations, and may be invalid in regions of the ocean where rotation is strong, such as the ACC ~\citep{Nikurashin2010a}. However, in regions closer to the equator, such as Palau, this assumption is quite good, as the following scaling analysis will demonstrate.  In combination, these three assumptions allow us to neglect all span wise gradients in the perturbation fields because the hill only perturbs the flow in the $x$-direction, there are no inertial oscillations to deflect the flow from its hill-perturbed state, and rotation remains constant at all locations in the domain. Thus, again making the Boussinesq approximation, the steady momentum and density transport equations that include (some representation of) rotation are given by
+\begin{eqnarray*}
+	U \D{u'}{x} +u' \D{u'}{x} + w' \D{u'}{z} &=& -\D{p'}{x} + fv' \,,\\
+	U \D{v'}{x} + u' \D{v'}{x} + w' \D{v'}{z} &=& - fu' \,,\\
+	U \D{w'}{x} + u' \D{w'}{x} + w' \D{w'}{z} &=& -\D{p}{z} - \frac{\rho}{\rho_0} g \,,\\
+	U \D{\rho'}{x} + u' \D{\rho'}{x} + w' \D{\rho'}{z} &=& \frac{\rho_0 N^2}{g} w\,,
+\end{eqnarray*}
+where $N^2 = -g/\rho_0 \partial\rhobar/\partial z$, subject to continuity $\nabla\cdot\ub'=0$, and
+the kinematic bottom boundary condition
+\[
+U\D{h}{x} + u' \D{h}{x} = w'\,.
+\]  
+Note that these equations are unchanged from those in the irrotational case except for the addition of $+fv'$ to the $x$-momentum equation, and of course the presence of the $y$-momentum equation. Thus the scalings resulting from our irrotational work above hold in all cases except for these two equations. 
+
+Nondimensionalizing as above, with the addition of $v = v_0 v*$, the $y$-momentum equation becomes
+\begin{eqnarray*}
+	kUv_0 \D{v}{x} + ku_0v_0(u \D{v}{x} + w \D{v}{z}) &=& - fu_0u \,.\\
+\end{eqnarray*}
+Requiring a balance of lowest order terms, this gives $v_0 = \frac{fu_0}{Uk}=u_0/Ro$, where $Ro = Uk/f$ is the Rossby number, and
+\begin{eqnarray*}
+	 \D{v}{x} + J(u \D{v}{x} + w \D{v}{z}) &=& - u \,.\\
+\end{eqnarray*}
+Turning next to the $x$-momentum equation, we have 
+\begin{eqnarray*}
+	k u_0 U \D{u}{x} + k u_0^2( u\D{u}{x} + w \D{u}{z})  &=& -k P \D{p}{x} + fv_0v\,.
+\end{eqnarray*}
+Again balancing lowest order terms, we have $P=Uu_0$, and the $x$-momentum equation becomes
+\begin{eqnarray*}
+	\D{u}{x} +J( u\D{u}{x} + w \D{u}{z})  &=& -\D{p}{x} + Ro^{-2}v\,.
+\end{eqnarray*}	
+From this result, we can diagnose the frailty of our assumptions about rotational effects. Using characteristic values of the ACC, $U \approx 0.1$~m~s$^{-1}$, $N \approx 10^-3$~rad~s$^{-1}$,  $k \approx 2\pi/2$~km, and $f\approx10^{-4}$~rad~s$^{-1}$, and $h_0\approx60$~m, we have $Ro \approx 0.5$, $Ro^{-2}\approx4$ and $J\approx 0.6$ ~\citep{Nikurashin2010a}. In other words, in the ACC, rotational effects on the scale of lee waves are zeroth order, and our assumptions simplifying them were likely misguided. However, if we focus instead on a more equatorial region with equally strong geostrophic currents, such as Palau, $f$ becomes an order of magnitude smaller, and $Ro\approx5$ for the lee wave system, giving $Ro^{-2}\approx 0.04$. Here, then, is a part of the ocean where rotation might only enter the equations as meridional jets squirting out of the lee waves.
+	
 	
 %	reflecting hydraulic control and a local energy sink, in analogy to a hydraulic jump downstream of open channel flow over a critical height.
 	
