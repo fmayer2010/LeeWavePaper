@@ -19,7 +19,7 @@
 %	where $U$ is the background horizontal velocity, $N$ the background buoyancy frequency, $D$ the background depth, $h_0$ the maximum height of the topography, and $k$ a characteristic wave number of the topography. 
 	Additionally, one can use the perturbation quantities $u_0$, $g'$, and $\delta$, to define an `internal' or `layer' Froude number $Fr_{\delta}=u_0/\sqrt{g'\delta}$. ~\citep{Rossby1951,Winters2012}. 
 	
-	In this paper, we nondimensionalize the 2D boussinesq equations describing the flow of infinitly deep fluid over topography to determine a scaling relationship between inner and outer quantities. Our scaling shows that, although it looks like an inverse Froude number, $Nh_0/U$ is in fact the square of of the internal Froude number, $Fr_{\delta}^2=\frac{u_0^2}{g'\delta}$. 
+	In this paper, we nondimensionalize the 2D boussinesq equations describing the flow of infinitly deep fluid over topography to determine a scaling relationship between inner and outer quantities. Our scaling shows that, although it looks like an inverse Froude number, $Nh_0/U$ is in fact the square of the internal Froude number, $Fr_{\delta}^2=\frac{u_0^2}{g'\delta}$. 
 	
 	
 	
@@ -185,10 +185,10 @@
 	
 	In other words, the relation between $J$ and $Fr_{\delta}$ holds only up to $J=O(1)$. Below this limit, waves accommodate the disturbance of the hill adiabatically, and carry it away from the site of generation, just as in an unstratified river flowing over a sub-critical sill. As $J$ approaches $O(1)$, the advective component of the perturbation plays a more significant role, until the perturbation volume flux above the hill reaches the maximum value that the system can energetically support. All of this squares with the dynamical significance of a Froude number. Above this limit, however, the instabilities brought on by too great a perturbation velocity restabilize the system such that the jet flowing above the hill is under hydraulic control, $Fr_{\delta}^2$=1, and $J$ informs the depth of the stagnant layer upstream as well dissipative and mixing effects of the jump downstream \citep{Winters2012}. 
 	
-	In this sense, we can succinctly describe the dynamics of stratified flow over topography as follows: The upstream characteristics of the flow present the system with a wave making capacity, and it is up top the hill to squeeze the wave into existence. But there is only so much juice in the fruit. 
+	In this sense, the upstream characteristics of the flow present the system with a wave making capacity, and it is up top the hill to squeeze the wave into existence. But there is only so much juice in the fruit. 
 	
 \section{Appendix: Rotation}
-Including rotation in the nondimensional equations requires only slight modification. Because rotational effects necessarily involve a span wise direction, we must now include an equation for the span wise momentum. 
+Including rotation in the nondimensional equations requires only slight modification. Because rotational effects necessarily involve a spanwise direction, we must now include an equation for the spanwise momentum. 
 
 We begin by aligning the $x$-direction with lines of latitude, and posit that the background currents are in geostrophic balance
 \begin{eqnarray*}
@@ -197,7 +197,7 @@ We begin by aligning the $x$-direction with lines of latitude, and posit that th
 \end{eqnarray*}
 where $P_G$ is a geostrophic pressure field that is decoupled from the perturbation pressure due the lee wave. 
 
-To keep the system as simple as possible, we further assume: it is in steady state; the bathymytery varies only in the $x$-direction; and rotation has a constant rate $f=\Omega sin(\bar{\phi})$, where $\Omega$ is the earth's rate of rotation, and $\bar{\phi}$ is the average lattitude of the domain. The assumption of steady state filters out inertial oscillations, and may be invalid in regions of the ocean where rotation is strong, such as the ACC ~\citep{Nikurashin2010a}. However, in regions closer to the equator, such as Palau, this assumption is quite good, as the following scaling analysis will demonstrate.  In combination, these three assumptions allow us to neglect all span wise gradients in the perturbation fields because the hill only perturbs the flow in the $x$-direction, there are no inertial oscillations to deflect the flow from its hill-perturbed state, and rotation remains constant at all locations in the domain. Thus, again making the Boussinesq approximation, the steady momentum and density transport equations that include (some representation of) rotation are given by
+To keep the system as simple as possible, we further assume: it is in steady state; the bathymytery varies only in the $x$-direction; and rotation has a constant rate $f=\Omega sin(\bar{\phi})$, where $\Omega$ is the earth's rate of rotation, and $\bar{\phi}$ is the average lattitude of the domain. The assumption of steady state filters out inertial oscillations, and may be invalid in regions of the ocean where rotation is strong, such as the ACC ~\citep{Nikurashin2010a}. However, in regions closer to the equator, such as Palau, this assumption is quite good, as the following scaling analysis will demonstrate.  In combination, these three assumptions allow us to neglect all spanwise gradients in the perturbation fields because the hill only perturbs the flow in the $x$-direction, there are no inertial oscillations to deflect the flow from its hill-perturbed state, and rotation remains constant at all locations in the domain. Thus, again making the Boussinesq approximation, the steady momentum and density transport equations that include (some representation of) rotation are given by
 \begin{eqnarray*}
 	U \D{u'}{x} +u' \D{u'}{x} + w' \D{u'}{z} &=& -\D{p'}{x} + fv' \,,\\
 	U \D{v'}{x} + u' \D{v'}{x} + w' \D{v'}{z} &=& - fu' \,,\\
