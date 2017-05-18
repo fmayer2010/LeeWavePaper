@@ -1,6 +1,6 @@
 This is BibTeX, Version 0.99d (TeX Live 2016)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
-The top-level auxiliary file: Juice_Letter.aux
+The top-level auxiliary file: Juice_letter_2.aux
 The style file: elsarticle-harv.bst
 Database file #1: bibliography.bib
 Repeated entry---line 2808 of file bibliography.bib
@@ -11,47 +11,46 @@ Repeated entry---line 4038 of file bibliography.bib
  : @book{Baines1995
  :                 ,
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "Long1953a"
 Warning--there's a number but no volume in Miles1969
-You've used 8 entries,
+You've used 14 entries,
             2821 wiz_defined-function locations,
-            697 strings with 6107 characters,
-and the built_in function-call counts, 3848 in all, are:
-= -- 409
-> -- 166
-< -- 6
-+ -- 62
-- -- 54
-* -- 336
-:= -- 689
-add.period$ -- 24
-call.type$ -- 8
-change.case$ -- 57
-chr.to.int$ -- 8
-cite$ -- 9
-duplicate$ -- 140
-empty$ -- 272
-format.name$ -- 82
-if$ -- 772
-int.to.chr$ -- 1
+            734 strings with 6883 characters,
+and the built_in function-call counts, 6182 in all, are:
+= -- 667
+> -- 244
+< -- 12
++ -- 93
+- -- 78
+* -- 515
+:= -- 1124
+add.period$ -- 41
+call.type$ -- 14
+change.case$ -- 95
+chr.to.int$ -- 13
+cite$ -- 15
+duplicate$ -- 237
+empty$ -- 446
+format.name$ -- 120
+if$ -- 1245
+int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 9
-newline$ -- 34
-num.names$ -- 32
-pop$ -- 52
+missing$ -- 14
+newline$ -- 54
+num.names$ -- 56
+pop$ -- 77
 preamble$ -- 1
-purify$ -- 50
+purify$ -- 82
 quote$ -- 0
-skip$ -- 106
+skip$ -- 185
 stack$ -- 0
-substring$ -- 247
-swap$ -- 18
+substring$ -- 373
+swap$ -- 30
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 69
+type$ -- 123
 warning$ -- 1
-while$ -- 37
+while$ -- 62
 width$ -- 0
-write$ -- 96
+write$ -- 162
 (There were 2 error messages)

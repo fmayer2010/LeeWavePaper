@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+
+\usepackage{natbib,amsfonts,graphics,amsmath}
+\usepackage{graphicx}
+
+\include{newcommands}
+
+\begin{document}
+	
+	\title{Scaling the lee wave equations including rotation}
+	
+	\author{Oliver Fringer and Eric Mayer}
+	
+	\maketitle
+
+\section{Including Rotation}
+Including rotation in the nondimensional equations requires only slight modification. Because rotational effects necessarily involve a span wise direction, we must now include an equation for the span wise momentum. 
+
+We begin by positing that the background currents are in geostrophic balance
+\begin{eqnarray*}
+	0 &=& -\D{P_G}{x} + fV \,,\\
+	0 &=& -\D{P_G}{y} - fU \,,\\
+\end{eqnarray*}
+where $P_G$ is a geostrophic pressure field that is decoupled from the perturbation pressure due the lee wave. It is analogous to $P$ in the irrotational equations above.
+	
+
+To keep the system as simple as possible, we further assume: it is in steady state; the bathymytery varies only in the $x$-direction; and rotation has a constant rate $f=\Omega sin(\bar{\phi})$, where $\Omega$ is the earth's rate of rotation, and $\bar{\phi}$ is the average lattitude of the domain. The assumption of steady state filters out inertial oscillations, and may be invalid in regions of the ocean where rotation is strong, such as the ACC ~\citep{Nikurashin2010a}. However, in regions closer to the equator, such as Palau, this assumption is quite good, as the following scaling analysis will demonstrate.  In combination, these three assumptions allow us to neglect all span wise gradients in the perturbation fields because the hill only perturbs the flow in the $x$-direction, there are no inertial oscillations to deflect the flow from its hill-perturbed state, and rotation remains constant at all locations in the domain. Thus, again making the Boussinesq approximation, the steady momentum and density transport equations that include (some representation of) rotation are given by
+
+\begin{eqnarray*}
+U \D{u'}{x} +u' \D{u'}{x} + w' \D{u'}{z} &=& -\D{p'}{x} + fv' \,,\\
+U \D{v'}{x} + u' \D{v'}{x} + w' \D{v'}{z} &=& - fu' \,,\\
+U \D{w'}{x} + u' \D{w'}{x} + w' \D{w'}{z} &=& -\D{p}{z} - \frac{\rho}{\rho_0} g \,,\\
+U \D{\rho'}{x} + u' \D{\rho'}{x} + w' \D{\rho'}{z} &=& \frac{\rho_0 N^2}{g} w\,,
+\end{eqnarray*}
+where $N^2 = -g/\rho_0 \partial\rhobar/\partial z$, subject to continuity $\nabla\cdot\ub'=0$, and
+the kinematic bottom boundary condition
+\[
+U\D{h}{x} + u' \D{h}{x} = w'\,.
+\]  
+
+Nondimensionalize with
+\begin{eqnarray*}
+	u' &=& u_0 u^*\,,\\
+	v' &=& v_0 v^*\,,\\
+	w' &=& w_0 w^*\,,\\
+	\rho' &=& R \rho^*\,,\\
+	p' &=& P p^*\,,\\
+	x &=& k^{-1} x^*\,,\\
+	z &=& \delta z^*\,.
+\end{eqnarray*}
+
+Nondimensionalizing as above, with the addition of $v = u_0v*$, the $u$-momentum equation becomes (after ignoring the *)
+\begin{eqnarray*}
+k u_0 U \D{u}{x} + k u_0^2\ub\cdot\nabla u  &=& -k P \D{p}{x} + fu_0v\,.
+\end{eqnarray*}
+Again, requiring a first order balance between linear advection and pressure gives
+\begin{eqnarray*}
+\D{u}{x} + J\ub\cdot\nabla u  &=& \D{p}{x} +Ro^{-1} \ v \,,
+\end{eqnarray*}
+where $Ro =  \frac{Uk}{f}$.
+Nondimensionalizing the $v$-momentum equations, we have
+\begin{eqnarray*}
+k u_0 U  \D{v}{x} +k u_0^2 \ub\cdot\nabla v &=& -k P\D{p}{y} - fu_0fu \,.
+\end{eqnarray*}
+Upon again requiring a balance of linear advection and pressure, this becomes
+\begin{eqnarray*}
+	\D{v}{x} + J\ub\cdot\nabla v  &=& \D{p}{y} - Ro^{-1} \ u \,.
+\end{eqnarray*}
+Nondimensionalizing the $w$-momentum equations with the scaling $w_0 = Uk h_0$ that we gleaned from the bottom boundary condition gives
+\[
+k^2 h_0 U^2 \D{w}{x} + k^2 h_0 u_0^2\ub\cdot\nabla w = -\frac{P}{\delta}\D{p}{z} - \frac{g R}{\rho_0} \rho \,.
+\]
+Requiring hydrostatic balance, as before, we have
+\[
+\epsilon^2 \left(\D{w}{x} + F\ub\cdot\nabla w\right) = -\D{p}{z} - \rho \,.
+\]
+And recalling $\delta = U/N$, this simplifies to 
+\[
+\epsilon^2 \left(\D{w}{x} + F\ub\cdot\nabla w\right) = -\D{p}{z} - \rho\,.
+\]
+Lastly, the nondimensional density transport equation is
+\[
+k U R \D{\rho}{x} + k u_0 R \ub\cdot\nabla\rho = \frac{k \rho_0 h_0 N^2 U}{g} w\,.
+\]
+Requiring a balance between the linear advection terms, as before, results in
+\[
+\epsilon^2 \left(\D{w}{x} + F\ub\cdot\nabla w\right) = -\D{p}{z} - \rho\,.
+\]
+
+\bibliographystyle{elsarticle-harv}
+\bibliography{bibliography}
+
+
+\end{document}

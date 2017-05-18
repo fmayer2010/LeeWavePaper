@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  17 MAY 2017 14:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  11 MAY 2017 22:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**Juice_Letter.tex
-(./Juice_Letter.tex
+**rotation_scaling.tex
+(./rotation_scaling.tex
 LaTeX2e <2016/03/31>
 Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/article.cls
@@ -131,8 +131,8 @@ Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \@input{newcommands.aux}
 \openout2 = `newcommands.aux'.
 
-(./newcommands.tex) (./Juice_Letter.aux)
-\openout1 = `Juice_Letter.aux'.
+(./newcommands.tex) (./rotation_scaling.aux)
+\openout1 = `rotation_scaling.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
 LaTeX Font Info:    ... okay on input line 8.
@@ -207,12 +207,12 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Try loading font information for U+msa on input line 15.
+LaTeX Font Info:    Try loading font information for U+msa on input line 14.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 15.
+LaTeX Font Info:    Try loading font information for U+msb on input line 14.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -220,52 +220,31 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 
-{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-
-Package natbib Warning: Citation `Long1953a' on page 2 undefined on input line 
-34.
-
-[2]
-
-Package natbib Warning: Citation `Long1953a' on page 3 undefined on input line 
-36.
-
-[3] [4] [5] [6] [7] [8] [9] (./Juice_Letter.bbl [10]
-Overfull \hbox (17.92783pt too wide) in paragraph at lines 23--26
-\OT1/cmr/m/n/12 URL \OT1/cmtt/m/n/12 http://www.journals.cambridge.org/abstract
-[]S0022112009992503 
- []
-
-)
-
-Package natbib Warning: There were undefined citations.
-
-[11] (./Juice_Letter.aux) ) 
+{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
+(./rotation_scaling.bbl) [3] (./rotation_scaling.aux) ) 
 Here is how much of TeX's memory you used:
- 2563 strings out of 493014
- 34241 string characters out of 6133351
- 103189 words of memory out of 5000000
- 6072 multiletter control sequences out of 15000+600000
+ 2539 strings out of 493014
+ 33852 string characters out of 6133351
+ 103885 words of memory out of 5000000
+ 6048 multiletter control sequences out of 15000+600000
  12886 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,8n,24p,1355b,210s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2016/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmex10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmmi8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr17.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/c
-msy6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cms
-y8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt1
-2.pfb>
-Output written on Juice_Letter.pdf (11 pages, 157393 bytes).
+ 38i,8n,24p,1141b,192s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2016
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2016/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2016/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2016/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2016/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2016/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2016/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2016/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2016/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on rotation_scaling.pdf (3 pages, 105783 bytes).
 PDF statistics:
- 88 PDF objects out of 1000 (max. 8388607)
- 62 compressed objects within 1 object stream
+ 54 PDF objects out of 1000 (max. 8388607)
+ 38 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
